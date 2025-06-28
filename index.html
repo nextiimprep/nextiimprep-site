@@ -18,23 +18,32 @@
       line-height: 1.6;
     }
     header {
-      background: #002244;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    header img {
-      max-width: 100px;
-      height: auto;
-      margin-bottom: 10px;
+      background: #ffffff;
+      padding: 10px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #eee;
     }
     header h1 {
-      font-size: 32px;
+      font-size: 22px;
+      color: #002244;
+      font-weight: 600;
     }
-    .tagline {
-      font-size: 18px;
-      margin-top: 5px;
-      color: #ccc;
+    header img {
+      height: 38px;
+      width: auto;
+      margin-right: 12px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      font-size: 16px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #002244;
     }
     .hero {
       background: #f4f6f8;
@@ -92,10 +101,21 @@
   </style>
 </head>
 <body>
+
   <header>
-    <img src="NextIIM LOGO 2000x2000 (1).png" alt="NextIIM Logo">
-    <h1>NextIIM Prep</h1>
-    <div class="tagline">Your Gateway to IIMs Begins Here</div>
+    <div style="display: flex; align-items: center;">
+      <img src="NextIIM LOGO 2000x2000 (1).png" alt="NextIIM Logo">
+      <h1>NextIIM Prep</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <div class="hero">
@@ -103,12 +123,12 @@
     <p>Guidance. Mentorship. Success.</p>
   </div>
 
-  <div class="section">
+  <div class="section" id="about">
     <h3>About Us</h3>
     <p>NextIIM Prep is founded by educators and mentors from top B-schools, with a mission to democratize access to high-quality management entrance preparation through structured guidance and affordable plans.</p>
   </div>
 
-  <div class="section">
+  <div class="section" id="courses">
     <h3>Our Courses</h3>
     <div class="courses">
       <div class="card">IPMAT (IIM Indore + Rohtak)</div>
@@ -126,7 +146,7 @@
     </div>
   </div>
 
-  <div class="section">
+  <div class="section" id="contact">
     <h3>Contact Us</h3>
     <form action="https://formspree.io/f/your-form-id" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
@@ -139,6 +159,6 @@
   <footer>
     &copy; 2025 NextIIM Prep. All rights reserved.
   </footer>
+
 </body>
 </html>
-
