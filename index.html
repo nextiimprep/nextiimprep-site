@@ -53,7 +53,7 @@
     .carousel-images {
       display: flex;
       width: 400%;
-      animation: slide 16s infinite;
+      animation: slide 24s infinite;
     }
     .carousel-images img {
       width: 100%;
@@ -62,9 +62,13 @@
     }
     @keyframes slide {
       0%   { transform: translateX(0); }
+      20%  { transform: translateX(0); }
       25%  { transform: translateX(-100%); }
+      45%  { transform: translateX(-100%); }
       50%  { transform: translateX(-200%); }
+      70%  { transform: translateX(-200%); }
       75%  { transform: translateX(-300%); }
+      95%  { transform: translateX(-300%); }
       100% { transform: translateX(0); }
     }
     .hero-text {
@@ -142,7 +146,7 @@
   <div class="hero">
     <div class="carousel">
       <div class="carousel-images">
-        <img src="slide1.png" alt="Slide 1" />
+        <img src="slide1.jpg" alt="Slide 1" />
         <img src="slide2.jpg" alt="Slide 2" />
         <img src="slide3.jpg" alt="Slide 3" />
         <img src="slide4.jpg" alt="Slide 4" />
