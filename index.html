@@ -53,18 +53,16 @@
     .carousel-images {
       display: flex;
       width: 200%;
-      animation: slide 16s infinite;
+      animation: slide 14s infinite ease-in-out;
     }
     .carousel-images img {
-      width: 100%;
+      width: 100vw;
       height: 400px;
       object-fit: cover;
     }
     @keyframes slide {
-      0%   { transform: translateX(0); }
-      45%  { transform: translateX(0); }
-      50%  { transform: translateX(-100%); }
-      95%  { transform: translateX(-100%); }
+      0%, 45%   { transform: translateX(0); }
+      50%, 95%  { transform: translateX(-100vw); }
       100% { transform: translateX(0); }
     }
     .hero-text {
