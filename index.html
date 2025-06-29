@@ -237,7 +237,7 @@
   <div class="section" id="courses">
     <h3>All About Management Exams After 12th</h3>
     <div class="courses">
-      <div class="card" onclick="showInfo('ipmat')">IPMAT (IIM Indore,IIM Rohtak, IIM Ranchi, IIM Amritsar, IIM Shillong)</div>
+      <div class="card" onclick="showInfo('ipmat')">IPMAT (IIM Indore, IIM Rohtak, IIM Ranchi, IIM Amritsar, IIM Shillong)</div>
       <div class="card" onclick="showInfo('jipmat')">JIPMAT (IIM Bodh Gaya, IIM Jammu)</div>
       <div class="card" onclick="showInfo('iim_amritsar')">IIM Amritsar, IIM Sirmaur, IIM Shillong Programs</div>
       <div class="card" onclick="showInfo('bms')">DU JAT/BMS (Shaheed Sukhdev, CBS, etc.)</div>
@@ -320,7 +320,27 @@
           <p><strong>Why It Matters:</strong> Provides direct admission into IIMs & select top colleges like IIFT, Nirma, TAPMI, NALSAR, and Alliance via your IPMAT Indore score</p>
         `,
       // Keep other exams as-is for now. You can ask me later to update each one in full.
-      jipmat: 'JIPMAT is a joint exam for IIM Bodh Gaya and IIM Jammu. It covers quantitative, verbal, and logical reasoning.',
+      jipmat: `
+          <h3>JIPMAT (Joint Integrated Program in Management Aptitude Test)</h3>
+          <p><strong>A unique gateway to IIM Jammu & IIM Bodh Gaya straight after Class 12.</strong></p>
+          <p><strong>Conducted by:</strong> National Testing Agency (NTA)</p>
+          <p><strong>Accepted by:</strong> IIM Jammu and IIM Bodh Gaya</p>
+          <table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
+            <thead>
+              <tr><th colspan="2">📘 JIPMAT Exam Structure</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Quantitative Aptitude</td><td>33 Qs</td></tr>
+              <tr><td>Logical Reasoning</td><td>33 Qs</td></tr>
+              <tr><td>Verbal Ability</td><td>34 Qs</td></tr>
+              <tr><td><strong>Total Duration</strong></td><td><strong>150 minutes</strong></td></tr>
+              <tr><td>Total Marks</td><td>400</td></tr>
+            </tbody>
+          </table>
+          <p><strong>Eligibility:</strong> Passed Class 12 with minimum 60% (General); age limits may apply</p>
+          <p><strong>Selection:</strong> Based only on JIPMAT score (no interview)</p>
+          <p><strong>Why It Matters:</strong> One of the most accessible paths to IIMs with only one test and no PI</p>
+        `,
       iim_amritsar: 'IIM Amritsar, Sirmaur, and Shillong offer BBA-like courses through alternate routes like CUET or internal admission.',
       bms: 'BMS/DU JAT is a competitive exam for admission to colleges like Shaheed Sukhdev and CBS under DU.',
       cuet: 'CUET is a national level test for central universities and includes sections on language, domain, and general test.',
