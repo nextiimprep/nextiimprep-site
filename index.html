@@ -13,17 +13,19 @@
       font-family: 'IBM Plex Serif', serif;
     }
     body {
-      background: #fff;
+      background: #f8f9fa;
       color: #1a1a1a;
       line-height: 1.6;
     }
     header {
-      background: #fff;
+      background: #ffffffd9;
+      backdrop-filter: blur(10px);
       padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #ddd;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
     .logo img {
       height: 80px;
@@ -38,18 +40,18 @@
     }
     nav a {
       margin-left: 30px;
-      color: #002244;
+      color: #1a1a1a;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
       transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #6a1b9a;
+      color: #5e35b1;
     }
     .hero {
-      background: #002244;
-      color: white;
+      background: #f4f4f4;
+      color: #002244;
       padding-top: 20px;
       text-align: center;
     }
@@ -57,8 +59,9 @@
       position: relative;
       overflow: hidden;
       height: 400px;
-      border-radius: 20px;
-      margin: 0 20px 10px 20px;
+      border-radius: 24px;
+      margin: 0 40px 20px 40px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
     .carousel-images {
       display: flex;
@@ -69,7 +72,7 @@
       width: 100vw;
       height: 400px;
       object-fit: cover;
-      border-radius: 20px;
+      border-radius: 24px;
     }
     @keyframes slide {
       0%, 30% { transform: translateX(0); }
@@ -95,22 +98,24 @@
       background-color: #6a1b9a;
     }
     .hero-text {
-      padding: 20px 10px 30px 10px;
+      padding: 20px 10px 40px 10px;
     }
     .hero h2 {
-      font-size: 32px;
+      font-size: 36px;
       margin-bottom: 10px;
+      font-weight: 600;
     }
     .hero p {
-      font-size: 18px;
+      font-size: 20px;
+      color: #333;
     }
     .section {
-      padding: 40px 20px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
     .section h3 {
-      font-size: 24px;
+      font-size: 26px;
       margin-bottom: 10px;
       color: #002244;
     }
@@ -120,34 +125,42 @@
       gap: 20px;
     }
     .card {
-      background: #f0f0f0;
-      padding: 20px;
-      border-radius: 8px;
-      flex: 1 1 250px;
+      background: #ffffff;
+      padding: 24px;
+      border-radius: 12px;
+      flex: 1 1 280px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
     }
     form {
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 12px;
     }
     input, textarea {
-      padding: 10px;
+      padding: 12px;
       font-size: 16px;
-      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
     }
     button {
-      padding: 10px;
+      padding: 12px;
       background: #002244;
       color: white;
       border: none;
       cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #001a33;
     }
     footer {
       background: #002244;
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
-      margin-top: 40px;
+      margin-top: 60px;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -183,8 +196,8 @@
     </div>
     <div class="hero-text">
       <h2>Next Begins Here</h2>
-      <p><i>Where IIM Dreams Take Their First Step</i></p>
-      
+      <p>Where IIM Dreams Take Their First Step.</p>
+      <p>Where your IIM journey takes root.</p>
     </div>
   </div>
 
