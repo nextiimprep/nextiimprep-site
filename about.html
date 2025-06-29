@@ -32,6 +32,7 @@
     p {
       font-size: 16px;
       margin-bottom: 20px;
+      color: #1D0D5A;
     }
     .section {
       display: flex;
@@ -56,11 +57,38 @@
       color: #1D0D5A;
       font-size: 16px;
     }
+    .about-nextiim {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+    .about-nextiim img {
+      width: 250px;
+      max-width: 100%;
+    }
+    .about-nextiim .text {
+      flex: 1;
+    }
+    .about-nextiim .text h1 {
+      font-size: 28px;
+      color: #1D0D5A;
+      margin-bottom: 10px;
+    }
+    .about-nextiim .text h2 {
+      font-size: 22px;
+      color: #EB5525;
+      margin-bottom: 15px;
+    }
+    .about-nextiim .text p {
+      font-size: 16px;
+      color: #1D0D5A;
+    }
     @media (max-width: 768px) {
-      .section {
+      .section, .about-nextiim {
         flex-direction: column;
       }
-      .section img {
+      .section img, .about-nextiim img {
         width: 100%;
         border-radius: 40px;
       }
@@ -69,8 +97,14 @@
 </head>
 <body>
   <div class="container">
-    <h1>About NextIIM Prep</h1>
-    <p><strong>NextIIM Prep</strong> is a mission-driven initiative designed to help aspirants crack India’s top management entrance exams after Class 12. We are building the most student-centric, affordable, and premium preparation platform, focused on exams like IPMAT, JIPMAT, DU JAT, SET, NPAT, Christ, and more.</p>
+    <div class="about-nextiim">
+      <img src="NextIIM icon LOGO.png" alt="NextIIM Logo">
+      <div class="text">
+        <h2>About NextIIM Prep</h2>
+        <h1>Next Begins Here — Where IIM Dreams Take Their First Step.</h1>
+        <p><strong>NextIIM Prep</strong> is a mission-driven initiative designed to help aspirants crack India’s top management entrance exams after Class 12. We are building the most student-centric, affordable, and premium preparation platform, focused on exams like IPMAT, JIPMAT, DU JAT, SET, NPAT, Christ, and more.</p>
+      </div>
+    </div>
 
     <h2>Our Vision</h2>
     <p>To democratize access to IIMs and top B-schools for every student – regardless of location, background, or affordability.</p>
@@ -81,7 +115,7 @@
     <div class="section">
       <img src="founder.jpg" alt="Pragesh Chandra">
       <div class="section-content">
-        <h2>About the Founder</h2>
+        <h3>About the Founder</h3>
         <p><strong>Pragesh Chandra</strong> is the Founder & Chief Mentor at <em>NextIIM Prep</em>, India’s emerging powerhouse in UG management entrance preparation. An <strong>alumnus of IIM Kashipur</strong>, Pragesh brings over <strong>11 years of rich experience</strong> in education, academic operations, and business leadership.</p>
         <p>Before founding NextIIM, he held <strong>Director-level roles</strong> at leading education brands like <strong>Sankalp Bharat, Adda247, Mahendras</strong>, and <strong>Career Launcher</strong>, where he helped scale multiple verticals and impact thousands of student journeys.</p>
         <p>A former <strong>Software Engineer at Lenovo India</strong>, Pragesh made a career shift driven by his passion for teaching. He has successfully cracked top competitive exams including <strong>GATE, CAT, GMAT, SSC CGL, IBPS</strong>, and more—making him uniquely relatable to aspirants.</p>
