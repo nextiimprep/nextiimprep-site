@@ -270,68 +270,37 @@
     function showInfo(exam) {
       const content = {
         ipmat: `
-        <h3>IPMAT (Integrated Program in Management Aptitude Test)</h3>
-        <p><strong>A great way to start your management career right after Class 12 from IIMs.</strong></p>
-        <p><strong>Conducted by:</strong> IIM Indore and IIM Rohtak (separate exams)</p>
-        <p><strong>Score also accepted by:</strong> IIM Ranchi, IIM Amritsar, and IIM Shillong</p>
-        <p><em>Note: IIM Jammu and IIM Bodh Gaya do not accept IPMAT scores; they accept JIPMAT only.</em></p>
-
-        <h4>Exam Pattern & Marks</h4>
-        <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; margin-bottom: 20px;">
-          <thead style="background: #00225a; color: white;">
-            <tr>
-              <th>Exam</th>
-              <th>Sections</th>
-              <th>Questions</th>
-              <th>Time</th>
-              <th>Marks</th>
-              <th>Negative Marking</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>IPMAT Indore</strong></td>
-              <td>Quant (MCQ), Quant (SA), Verbal</td>
-              <td>~30, ~15, ~45</td>
-              <td>40 + 40 + 40 mins</td>
-              <td>100</td>
-              <td>Yes (MCQs only)</td>
-            </tr>
-            <tr>
-              <td><strong>IPMAT Rohtak</strong></td>
-              <td>Quant, LR, Verbal</td>
-              <td>40 each</td>
-              <td>40 + 40 + 40 mins</td>
-              <td>160</td>
-              <td>Yes</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h4>Eligibility</h4>
-        <ul>
-          <li>Class 12 passed or appearing (2023/2024 for 2025)</li>
-          <li>Min 60% (General); 55% (SC/ST/PwD)</li>
-          <li>Age: Born on/after Aug 1, 2005 (Gen)</li>
-        </ul>
-
-        <h4>Selection Process</h4>
-        <ul>
-          <li>Aptitude Test + Personal Interview (in most IIMs)</li>
-          <li>Composite score: Test + PI + Academics + Diversity (varies)</li>
-        </ul>
-
-        <h4>Why it matters</h4>
-        <p>It’s the only direct route to IIMs after Class 12 – no need to appear in CAT later!</p>
-
-        <h4>Other Colleges Accepting IPMAT Score</h4>
-        <ul>
-          <li>IIFT Kakinada</li>
-          <li>NALSAR University of Law</li>
-          <li>Nirma University</li>
-          <li>TAPMI Manipal</li>
-          <li>Alliance University</li>
-        </ul>
+    <h3>IPMAT (Integrated Program in Management Aptitude Test)</h3>
+    <p><strong>A great career opportunity right after Class 12 from IIMs.</strong></p>
+    <p><strong>Conducted by:</strong> IIM Indore and IIM Rohtak (separately)</p>
+    <p><strong>Score also accepted by:</strong> IIM Ranchi, IIM Amritsar, IIM Shillong</p>
+    <p><strong>Note:</strong> IIM Jammu and Bodh Gaya only accept JIPMAT</p>
+    <table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
+      <thead>
+        <tr><th colspan="2">📘 IPMAT Indore</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Quant (MCQ)</td><td>~30 Qs, 40 mins</td></tr>
+        <tr><td>Quant (Short Ans)</td><td>~15 Qs, 40 mins</td></tr>
+        <tr><td>Verbal Ability (MCQ)</td><td>~45 Qs, 40 mins</td></tr>
+        <tr><td><strong>Total Duration</strong></td><td><strong>120 minutes</strong></td></tr>
+        <tr><td>Total Marks</td><td>100</td></tr>
+      </tbody>
+    </table>
+    <table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
+      <thead>
+        <tr><th colspan="2">📘 IPMAT Rohtak</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Quant</td><td>40 Qs</td></tr>
+        <tr><td>Logical Reasoning</td><td>40 Qs</td></tr>
+        <tr><td>Verbal Ability</td><td>40 Qs</td></tr>
+        <tr><td><strong>Total Duration</strong></td><td><strong>120 minutes</strong></td></tr>
+        <tr><td>Total Marks</td><td>160</td></tr>
+      </tbody>
+    </table>
+    <p><strong>Eligibility:</strong> Class 12 passed/appearing, typically 60%+ marks. Age: Born on/after Aug 1, 2005 (General)</p>
+    <p><strong>Selection:</strong> Written test + Personal Interview (depends on IIM)</p>
       `,
       // Keep other exams as-is for now. You can ask me later to update each one in full.
       jipmat: 'JIPMAT is a joint exam for IIM Bodh Gaya and IIM Jammu. It covers quantitative, verbal, and logical reasoning.',
