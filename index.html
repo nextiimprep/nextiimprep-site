@@ -118,17 +118,14 @@
       padding: 20px 10px 40px 10px;
     }
   .typing {
-  font-size: 36px;
-  font-weight: 600;
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .05em;
   width: 0;
-  position: relative;
   animation: typing 4s steps(30, end) forwards;
+  position: relative;
 }
-
 .typing::after {
   content: '';
   position: absolute;
@@ -139,12 +136,6 @@
   background-color: white;
   animation: blink-caret 0.8s step-end infinite, hide-caret 0s 4s forwards;
 }
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
 @keyframes blink-caret {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
@@ -268,11 +259,11 @@
       <span class="dot" onclick="jumpToSlide(2)"></span>
     </div>
     <div class="hero-text">
-  <div id="typingWrapper">
-  <h2 class="typing">Next Begins Here</h2>
-</div>
-  <p class="typing2"><em>Where IIM Dreams Take Their First Step</em></p>
-</div>
+      <h2 class="typing">Next Begins Here</h2>
+      <p class="typing2"><em>Where IIM Dreams Take Their First Step</em></p>
+    </div>
+  </div>
+
   <div class="section" id="about">
     <h3>About Us</h3>
     <p>NextIIM Prep is founded by educators and mentors from top B-schools, with a mission to democratize access to high-quality management entrance preparation through structured guidance and affordable plans.</p>
@@ -411,13 +402,5 @@
       });
     }
   </script>
-    <script>
-  setInterval(() => {
-    const el = document.querySelector('.typing');
-    el.classList.remove('typing');
-    void el.offsetWidth; // trigger reflow
-    el.classList.add('typing');
-  }, 6000);
-</script>
 </body>
 </html>
