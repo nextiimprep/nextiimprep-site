@@ -269,11 +269,10 @@
     </div>
     <div class="hero-text">
   <div id="typingWrapper">
-    <h2 class="typing">Next Begins Here</h2>
-  </div>
+  <h2 class="typing">Next Begins Here</h2>
+</div>
   <p class="typing2"><em>Where IIM Dreams Take Their First Step</em></p>
 </div>
-
   <div class="section" id="about">
     <h3>About Us</h3>
     <p>NextIIM Prep is founded by educators and mentors from top B-schools, with a mission to democratize access to high-quality management entrance preparation through structured guidance and affordable plans.</p>
@@ -412,15 +411,13 @@
       });
     }
   </script>
-</body>
     <script>
   setInterval(() => {
-    const wrapper = document.getElementById('typingWrapper');
-    const original = wrapper.innerHTML;
-    wrapper.innerHTML = ''; // Remove
-    setTimeout(() => {
-      wrapper.innerHTML = original; // Re-add to restart animation
-    }, 50);
-  }, 6000); // loop every 6 sec (4s type + 2s pause)
+    const el = document.querySelector('.typing');
+    el.classList.remove('typing');
+    void el.offsetWidth; // trigger reflow
+    el.classList.add('typing');
+  }, 6000);
 </script>
+</body>
 </html>
