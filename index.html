@@ -145,9 +145,7 @@
     }
     .card:hover {
       transform: translateY(-4px);
-      background: linear-gradient(135deg, #f6f7ff 0%, #e9f0ff 100%);
-      box-shadow: 0 8px 20px rgba(65, 75, 145, 0.15);
-      border-left: 5px solid #3a4895;
+      background: #f2eaff;
     }
     .info-panel {
       position: fixed;
@@ -180,6 +178,111 @@
   </style>
 </head>
 <body>
-  <!-- Existing content remains unchanged -->
+  <header>
+    <div class="logo">
+      <a href="index.html">
+        <img src="NextIIM LOGO.png" alt="NextIIM Logo" />
+      </a>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#courses">Courses</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="carousel">
+      <div class="carousel-images">
+        <img src="Slide1.png" alt="Slide 1" />
+        <img src="Slide2.png" alt="Slide 2" />
+        <img src="Slide3.png" alt="Slide 3" />
+      </div>
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+    <div class="hero-text">
+      <h2>Next Begins Here</h2>
+      <p><em>Where IIM Dreams Take Their First Step</em></p>
+    </div>
+  </div>
+
+  <div class="section" id="about">
+    <h3>About Us</h3>
+    <p>NextIIM Prep is founded by educators and mentors from top B-schools, with a mission to democratize access to high-quality management entrance preparation through structured guidance and affordable plans.</p>
+  </div>
+
+  <div class="section" id="courses">
+    <h3>All About Management Exams After 12th</h3>
+    <div class="courses">
+      <div class="card" onclick="showInfo('ipmat')">IPMAT (IIM Indore, Rohtak, Ranchi, Bodh Gaya, Jammu)</div>
+      <div class="card" onclick="showInfo('jipmat')">JIPMAT (IIM Bodh Gaya, Jammu)</div>
+      <div class="card" onclick="showInfo('iim_amritsar')">IIM Amritsar, IIM Sirmaur, IIM Shillong Programs</div>
+      <div class="card" onclick="showInfo('bms')">DU JAT/BMS (Shaheed Sukhdev, CBS, etc.)</div>
+      <div class="card" onclick="showInfo('cuet')">CUET (Commerce + General)</div>
+      <div class="card" onclick="showInfo('set')">SET (Symbiosis University BBA)</div>
+      <div class="card" onclick="showInfo('npat')">NPAT (NMIMS BBA)</div>
+      <div class="card" onclick="showInfo('christ')">Christ University BBA</div>
+      <div class="card" onclick="showInfo('xaviers')">St. Xavier’s Mumbai Entrance</div>
+      <div class="card" onclick="showInfo('foundation')">Class 11 & 12 Commerce Foundation</div>
+    </div>
+  </div>
+
+  <div class="info-panel" id="infoPanel">
+    <button class="close-btn" onclick="closeInfo()">×</button>
+    <div id="infoContent">Details will appear here.</div>
+  </div>
+
+  <div class="section">
+    <h3>Why Choose NextIIM?</h3>
+    <div class="why">
+      <div class="card">Top Mentors from IIMs</div>
+      <div class="card">1-on-1 Mentorship</div>
+      <div class="card">Affordable Plans with Premium Experience</div>
+    </div>
+  </div>
+
+  <div class="section" id="contact">
+    <h3>Contact Us</h3>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 NextIIM Prep. All rights reserved.
+  </footer>
+
+  <script>
+    const infoPanel = document.getElementById('infoPanel');
+    const infoContent = document.getElementById('infoContent');
+    function showInfo(exam) {
+      const content = {
+        ipmat: 'IPMAT is conducted by IIM Indore, Rohtak, etc. for admission to 5-year integrated programs.',
+        jipmat: 'JIPMAT is a joint exam for IIM Bodh Gaya and IIM Jammu. It covers quantitative, verbal, and logical reasoning.',
+        iim_amritsar: 'IIM Amritsar, Sirmaur, and Shillong offer BBA-like courses through alternate routes like CUET or internal admission.',
+        bms: 'BMS/DU JAT is a competitive exam for admission to colleges like Shaheed Sukhdev and CBS under DU.',
+        cuet: 'CUET is a national level test for central universities and includes sections on language, domain, and general test.',
+        set: 'Symbiosis SET is the entrance for BBA programs at Symbiosis campuses like Pune and Noida.',
+        npat: 'NPAT is the official exam for NMIMS Mumbai and other campuses for BBA and B.Com (Hons).',
+        christ: 'Christ University conducts its own entrance test for its BBA program which includes verbal, quant and GK.',
+        xaviers: 'St. Xavier’s Mumbai has a unique entrance for BMS and BMM programs with separate cutoff and PI round.',
+        foundation: 'This course prepares students of Class 11 and 12 with foundational concepts for all commerce and aptitude-based entrance exams.'
+      };
+      infoContent.textContent = content[exam] || 'Details not available.';
+      infoPanel.classList.add('active');
+    }
+    function closeInfo() {
+      infoPanel.classList.remove('active');
+    }
+  </script>
 </body>
 </html>
