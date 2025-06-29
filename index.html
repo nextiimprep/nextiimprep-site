@@ -117,32 +117,33 @@
     .hero-text {
       padding: 20px 10px 40px 10px;
     }
-   .typing {
+  .typing {
   overflow: hidden;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .05em;
   width: 0;
   animation: typing 4s steps(30, end) forwards;
-  border-right: .12em solid #fff;
-  animation-delay: 0s;
+  position: relative;
 }
 .typing::after {
   content: '';
-  animation: hide-caret 0s 4s forwards;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: white;
+  animation: blink-caret 0.8s step-end infinite, hide-caret 0s 4s forwards;
+}
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @keyframes hide-caret {
-  to {
-    border-right: none;
-  }
+  to { opacity: 0; }
 }
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
     .typing2 {
       opacity: 0;
       animation: fadeIn 2s ease-in-out 4s forwards;
