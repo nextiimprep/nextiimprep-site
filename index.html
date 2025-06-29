@@ -269,7 +269,8 @@
     const infoContent = document.getElementById('infoContent');
     function showInfo(exam) {
       const content = {
-        ipmat: ' <h3>IPMAT (Integrated Program in Management Aptitude Test)</h3>
+        ipmat: `
+        <h3>IPMAT (Integrated Program in Management Aptitude Test)</h3>
         <p><strong>A great way to start your management career right after Class 12 from IIMs.</strong></p>
         <p><strong>Conducted by:</strong> IIM Indore and IIM Rohtak (separate exams)</p>
         <p><strong>Score also accepted by:</strong> IIM Ranchi, IIM Amritsar, and IIM Shillong</p>
@@ -342,17 +343,7 @@
       christ: 'Christ University conducts its own entrance test for its BBA program which includes verbal, quant and GK.',
       xaviers: 'St. Xavier’s Mumbai has a unique entrance for BMS and BMM programs with separate cutoff and PI round.',
       foundation: 'This course prepares students of Class 11 and 12 with foundational concepts for all commerce and aptitude-based entrance exams.'
-    };',
-        jipmat: 'JIPMAT is a joint exam for IIM Bodh Gaya and IIM Jammu. It covers quantitative, verbal, and logical reasoning.',
-        iim_amritsar: 'IIM Amritsar, Sirmaur, and Shillong offer BBA-like courses through alternate routes like CUET or internal admission.',
-        bms: 'BMS/DU JAT is a competitive exam for admission to colleges like Shaheed Sukhdev and CBS under DU.',
-        cuet: 'CUET is a national level test for central universities and includes sections on language, domain, and general test.',
-        set: 'Symbiosis SET is the entrance for BBA programs at Symbiosis campuses like Pune and Noida.',
-        npat: 'NPAT is the official exam for NMIMS Mumbai and other campuses for BBA and B.Com (Hons).',
-        christ: 'Christ University conducts its own entrance test for its BBA program which includes verbal, quant and GK.',
-        xaviers: 'St. Xavier’s Mumbai has a unique entrance for BMS and BMM programs with separate cutoff and PI round.',
-        foundation: 'This course prepares students of Class 11 and 12 with foundational concepts for all commerce and aptitude-based entrance exams.'
-      };
+    };
       infoContent.textContent = content[exam] || 'Details not available.';
       infoPanel.classList.add('active');
     }
