@@ -20,15 +20,16 @@
     header {
       background: #ffffffd9;
       backdrop-filter: blur(10px);
-      padding: 15px 40px;
+      padding: 15px 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       border-bottom: 1px solid #ddd;
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
     }
     .logo img {
-      height: 80px;
+      height: 70px;
       width: auto;
       transition: transform 0.3s ease;
     }
@@ -38,8 +39,14 @@
     .logo a {
       display: inline-block;
     }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
     nav a {
-      margin-left: 30px;
+      margin: 10px;
       color: #1a1a1a;
       text-decoration: none;
       font-weight: 600;
@@ -58,19 +65,21 @@
     .carousel {
       position: relative;
       overflow: hidden;
-      height: 400px;
+      height: 50vh;
+      max-height: 400px;
       border-radius: 24px;
-      margin: 0 40px 20px 40px;
+      margin: 0 5vw 20px 5vw;
       box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
     .carousel-images {
       display: flex;
-      width: 300vw;
+      width: 300%;
       animation: slide 21s infinite ease-in-out;
     }
     .carousel-images img {
       width: 100vw;
-      height: 400px;
+      height: 50vh;
+      max-height: 400px;
       object-fit: cover;
       border-radius: 24px;
     }
@@ -101,21 +110,21 @@
       padding: 20px 10px 40px 10px;
     }
     .hero h2 {
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 10px;
       font-weight: 600;
     }
     .hero p {
-      font-size: 20px;
+      font-size: 18px;
       color: #333;
     }
     .section {
-      padding: 60px 20px;
+      padding: 40px 5vw;
       max-width: 1000px;
       margin: auto;
     }
     .section h3 {
-      font-size: 26px;
+      font-size: 24px;
       margin-bottom: 10px;
       color: #002244;
     }
@@ -162,6 +171,34 @@
       margin-top: 60px;
       font-size: 14px;
     }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+      }
+      .carousel {
+        height: 40vh;
+        margin: 0 20px 20px 20px;
+      }
+      .carousel-images img {
+        height: 40vh;
+      }
+      .hero h2 {
+        font-size: 26px;
+      }
+      .hero p {
+        font-size: 16px;
+      }
+      .card {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -196,7 +233,8 @@
     </div>
     <div class="hero-text">
       <h2>Next Begins Here</h2>
-      <p><i>Where IIM Dreams Take Their First Step</i></p>
+      <p>Where IIM Dreams Take Their First Step.</p>
+      <p>Where your IIM journey takes root.</p>
     </div>
   </div>
 
