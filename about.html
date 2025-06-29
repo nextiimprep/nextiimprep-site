@@ -38,10 +38,9 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin-top: 10px;
+      gap: 30px;
     }
     nav a {
-      margin: 10px;
       color: #1D0D5A;
       text-decoration: none;
       font-weight: 600;
@@ -179,8 +178,9 @@
     </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
       <a href="courses.html">Courses</a>
+      <a href="#blog">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -222,7 +222,6 @@
       document.getElementById('vision').style.display = 'none';
       document.getElementById('mission').style.display = 'none';
       document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-
       document.getElementById(tabId).style.display = 'block';
       event.target.classList.add('active');
     }
