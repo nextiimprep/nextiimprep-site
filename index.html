@@ -274,14 +274,11 @@
     <div class="courses">
       <div class="card" onclick="showInfo('ipmat')">IPMAT (IIM Indore, IIM Rohtak, IIM Ranchi, IIM Amritsar, IIM Shillong)</div>
       <div class="card" onclick="showInfo('jipmat')">JIPMAT (IIM Bodh Gaya, IIM Jammu)</div>
-      <div class="card" onclick="showInfo('iim_amritsar')">IIM Amritsar, IIM Sirmaur, IIM Shillong Programs</div>
       <div class="card" onclick="showInfo('bms')">DU JAT/BMS (Shaheed Sukhdev, CBS, etc.)</div>
-      <div class="card" onclick="showInfo('cuet')">CUET (Commerce + General)</div>
       <div class="card" onclick="showInfo('set')">SET (Symbiosis University BBA)</div>
       <div class="card" onclick="showInfo('npat')">NPAT (NMIMS BBA)</div>
       <div class="card" onclick="showInfo('christ')">Christ University BBA</div>
       <div class="card" onclick="showInfo('xaviers')">St. Xavier’s Mumbai Entrance</div>
-      <div class="card" onclick="showInfo('foundation')">Class 11 & 12 Commerce Foundation</div>
     </div>
   </div>
 
@@ -376,7 +373,6 @@
           <p><strong>Selection:</strong> Based only on JIPMAT score (no interview)</p>
           <p><strong>Why It Matters:</strong> One of the most accessible paths to IIMs with only one test and no PI</p>
         `,
-      iim_amritsar: 'IIM Amritsar, Sirmaur, and Shillong offer BBA-like courses through alternate routes like CUET or internal admission.',
       bms:  `
         <h3>DU BMS (Bachelor of Management Studies)</h3>
 <p><strong>Top-rated undergraduate management program offered by Delhi University colleges.</strong></p>
@@ -399,8 +395,31 @@
 <p><strong>Admission Process:</strong> Based on CUET UG score + centralized DU counseling via Common Seat Allocation System (CSAS)</p>
 <p><strong>Why It Matters:</strong> DU BMS is among the most competitive UG management programs in India with top-tier placements and faculty.</p>
 `,
-      cuet: 'CUET is a national level test for central universities and includes sections on language, domain, and general test.',
-      set: 'Symbiosis SET is the entrance for BBA programs at Symbiosis campuses like Pune and Noida.',
+      set: `
+        <h3>SET – Symbiosis Entrance Test (BBA)</h3>
+<p><strong>Entrance exam for Symbiosis International (Deemed) University’s BBA programs.</strong></p>
+<p><strong>Conducted by:</strong> Symbiosis International University</p>
+<p><strong>Accepted by:</strong> Symbiosis Pune (SCMS), Noida, Nagpur, Hyderabad</p>
+
+<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
+  <thead>
+    <tr><th colspan="2">📘 SET BBA Exam Structure</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>General English</td><td>16 Qs</td></tr>
+    <tr><td>Quantitative Aptitude</td><td>16 Qs</td></tr>
+    <tr><td>General Awareness</td><td>16 Qs</td></tr>
+    <tr><td>Analytical & Logical Reasoning</td><td>12 Qs</td></tr>
+    <tr><td><strong>Total Marks</strong></td><td><strong>60</strong></td></tr>
+    <tr><td><strong>WAT (Essay)</strong></td><td>Yes – post-exam (15 mins)</td></tr>
+  </tbody>
+</table>
+
+<p><strong>Mode:</strong> Computer-Based Test (CBT)</p>
+<p><strong>Eligibility:</strong> Passed/appearing Class 12 (any stream)</p>
+<p><strong>Selection:</strong> Based on SET score + PI-WAT rounds</p>
+<p><strong>Why It Matters:</strong> SCMS Pune and other Symbiosis campuses offer excellent infrastructure, industry exposure, and placements.</p>
+`,
       npat: `
        <h3>NPAT (NMIMS Programs After Twelfth)</h3>
        <p><strong>Official entrance exam for BBA & other UG programs at NMIMS campuses.</strong></p>
@@ -425,9 +444,52 @@
 <p><strong>Courses Offered:</strong> BBA, B.Com (Hons), B.Sc Finance, Branding & Advertising, Liberal Arts</p>
 <p><strong>Why It Matters:</strong> NMIMS BBA is among the top private UG management programs in India, with great placements and international exposure.</p>
 `,
-      christ: 'Christ University conducts its own entrance test for its BBA program which includes verbal, quant and GK.',
-      xaviers: 'St. Xavier’s Mumbai has a unique entrance for BMS and BMM programs with separate cutoff and PI round.',
-      foundation: 'This course prepares students of Class 11 and 12 with foundational concepts for all commerce and aptitude-based entrance exams.'
+      christ: `
+        <h3>Christ University BBA Entrance</h3>
+<p><strong>Institutional-level entrance test for various BBA specializations.</strong></p>
+<p><strong>Conducted by:</strong> Christ (Deemed to be University)</p>
+<p><strong>Campuses:</strong> Bengaluru (Main), Delhi NCR, Pune-Lavasa, and others</p>
+
+<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
+  <thead>
+    <tr><th colspan="2">📘 Christ BBA Entrance Pattern</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>English Language</td><td>25 Qs</td></tr>
+    <tr><td>General Knowledge</td><td>20 Qs</td></tr>
+    <tr><td>Quantitative Aptitude</td><td>20 Qs</td></tr>
+    <tr><td>Reasoning</td><td>25 Qs</td></tr>
+    <tr><td>Data Analysis & Interpretation</td><td>10 Qs</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>100 Qs, 120 mins</strong></td></tr>
+  </tbody>
+</table>
+
+<p><strong>Selection Process:</strong> Entrance Test + Micro Presentation + Personal Interview</p>
+<p><strong>Why It Matters:</strong> Christ is a top private university with diverse BBA options and strong academic culture.</p>
+`,
+      xaviers: `
+        <h3>St. Xavier’s BMS Entrance Test</h3>
+<p><strong>Institute-level entrance test for the Bachelor of Management Studies program.</strong></p>
+<p><strong>Conducted by:</strong> St. Xavier’s College (Autonomous), Mumbai</p>
+
+<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
+  <thead>
+    <tr><th colspan="2">📘 Xavier’s BMS Entrance Pattern</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>English Language & Comprehension</td><td>20 Qs</td></tr>
+    <tr><td>Logical Reasoning</td><td>20 Qs</td></tr>
+    <tr><td>Quantitative Skills</td><td>20 Qs</td></tr>
+    <tr><td>General Knowledge & Current Affairs</td><td>20 Qs</td></tr>
+    <tr><td>Critical Thinking</td><td>20 Qs</td></tr>
+    <tr><td><strong>Total</strong></td><td><strong>100 Qs</strong></td></tr>
+  </tbody>
+</table>
+
+<p><strong>Eligibility:</strong> Passed Class 12 with minimum marks; age restrictions apply</p>
+<p><strong>Selection:</strong> Entrance Test + Academic Performance (Class 12)</p>
+<p><strong>Why It Matters:</strong> Xavier’s Mumbai is one of India’s most prestigious institutions for liberal and management education.</p>
+` ,
     };
       infoContent.innerHTML = content[exam] || '<p>Details not available.</p>';
       infoPanel.classList.add('active');
