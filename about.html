@@ -14,23 +14,39 @@
       line-height: 1.6;
     }
     header {
-      background-color: #ffffff;
+      background-color: #ffffffd9;
       border-bottom: 1px solid #ddd;
       padding: 15px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      flex-wrap: wrap;
     }
-    header .logo {
-      font-size: 20px;
-      font-weight: bold;
-      color: #1D0D5A;
+    .logo img {
+      height: 70px;
+      width: auto;
+      transition: transform 0.3s ease;
+    }
+    .logo img:hover {
+      transform: scale(1.08);
+    }
+    .logo a {
+      display: inline-block;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
     }
     nav a {
-      margin-left: 20px;
-      text-decoration: none;
+      margin: 10px;
       color: #1D0D5A;
-      font-weight: 500;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #EB5525;
@@ -156,7 +172,11 @@
 </head>
 <body>
   <header>
-    <div class="logo">NextIIM Prep</div>
+    <div class="logo">
+      <a href="index.html">
+        <img src="NextIIM LOGO.png" alt="NextIIM Logo" />
+      </a>
+    </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -184,7 +204,7 @@
       <p>To democratize access to IIMs and top B-schools for every student – regardless of location, background, or affordability.</p>
     </div>
     <div id="mission" class="tab-content">
-      <p>To offer India's best guidance, content, and mentorship for UG Management Entrance exams through innovative content, top mentors, and a supportive ecosystem.</p>
+      <p>Building India's most trusted learning platform that delivers affordable, high-quality education and job-ready skills in local languages—helping every learner in Bharat learn, grow, and succeed from anywhere.</p>
     </div>
 
     <div class="section">
