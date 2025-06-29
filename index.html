@@ -117,14 +117,25 @@
     .hero-text {
       padding: 20px 10px 40px 10px;
     }
-    .typing {
+   .typing {
   overflow: hidden;
-  border-right: .12em solid #fff;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: .05em;
   width: 0;
   animation: typing 4s steps(30, end) forwards;
+  border-right: .12em solid #fff;
+  animation-delay: 0s;
+}
+.typing::after {
+  content: '';
+  animation: hide-caret 0s 4s forwards;
+}
+
+@keyframes hide-caret {
+  to {
+    border-right: none;
+  }
 }
 
 @keyframes typing {
