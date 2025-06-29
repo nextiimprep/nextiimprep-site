@@ -33,56 +33,36 @@
       font-size: 16px;
       margin-bottom: 20px;
     }
-    .highlight-box {
+    .section {
       display: flex;
-      background: white;
-      border-radius: 120px 0 0 120px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      overflow: hidden;
-      margin-top: 40px;
       align-items: center;
+      gap: 40px;
+      margin-top: 60px;
     }
-    .highlight-box img {
-      width: 45%;
-      height: auto;
-      object-fit: cover;
+    .section img {
+      width: 50%;
+      border-radius: 100px 0 0 100px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
     }
-    .highlight-content {
-      padding: 40px;
+    .section-content {
       flex: 1;
     }
-    .highlight-content h3 {
+    .section-content h3 {
       color: #1D0D5A;
       font-size: 26px;
       margin-bottom: 10px;
     }
-    .highlight-content p {
+    .section-content p {
       color: #444;
       font-size: 16px;
-      margin-bottom: 20px;
-    }
-    .highlight-content .button {
-      display: inline-block;
-      padding: 10px 20px;
-      border: 2px solid #EB5525;
-      border-radius: 12px 0 12px 0;
-      color: #EB5525;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .highlight-content .button:hover {
-      background: #EB5525;
-      color: white;
     }
     @media (max-width: 768px) {
-      .highlight-box {
+      .section {
         flex-direction: column;
-        border-radius: 40px 40px 0 0;
       }
-      .highlight-box img {
+      .section img {
         width: 100%;
-        border-radius: 40px 40px 0 0;
+        border-radius: 40px;
       }
     }
   </style>
@@ -98,12 +78,11 @@
     <h2>Our Mission</h2>
     <p>To offer India's best guidance, content, and mentorship for UG Management Entrance exams through innovative content, top mentors, and a supportive ecosystem.</p>
 
-    <div class="highlight-box">
+    <div class="section">
       <img src="pragesh.jpg" alt="Pragesh Chandra">
-      <div class="highlight-content">
+      <div class="section-content">
         <h3>About the Founder</h3>
         <p><strong>Pragesh Chandra</strong> is the Founder & Chief Mentor at NextIIM Prep. With over 11 years of experience in education and operations, he has worked with top brands like Sankalp Bharat, Adda247, Mahendras, and Career Launcher. A former Software Engineer at Lenovo India, Pragesh has cracked exams like GATE, CAT, GMAT, SSC CGL, IBPS, and more. Passionate about student success, he is now focused on building NextIIM as India’s most impactful UG management prep platform.</p>
-        <a href="#" class="button">Explore More</a>
       </div>
     </div>
 
