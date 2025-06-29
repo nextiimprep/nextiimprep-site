@@ -36,23 +36,27 @@
     .logo a {
       display: inline-block;
     }
-    nav {
-      flex: 2;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-    nav a {
-      color: #1D0D5A;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #EB5525;
-    }
+   nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+nav a {
+  color: #1D0D5A;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 12px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #EB5525;
+}
     .container {
       max-width: 1200px;
       margin: 0 auto;
