@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" type="image/png" href="favicon.png" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>NextIIM Prep – Your Gateway to IIMs</title>
+  <link rel="icon" type="image/png" href="favicon.png"/>
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
-    html {
+    html, body {
       height: 100%;
       overflow-x: hidden;
-    }
-    body {
-      background: #f8f9fa;
       color: #1D0D5A;
+      background: #f8f9fa;
       line-height: 1.6;
-      min-height: 100%;
-      overflow-y: auto;
     }
     header {
       background: #ffffffd9;
@@ -37,21 +32,9 @@
     }
     .logo img {
       height: 70px;
-      width: auto;
       transition: transform 0.3s ease;
     }
-    .logo img:hover {
-      transform: scale(1.08);
-    }
-    .logo a {
-      display: inline-block;
-    }
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 10px;
-    }
+    .logo img:hover { transform: scale(1.08); }
     nav a {
       margin: 10px;
       color: #1D0D5A;
@@ -60,145 +43,101 @@
       font-size: 16px;
       transition: color 0.3s ease;
     }
-    nav a:hover {
-      color: #EB5525;
-    }
+    nav a:hover { color: #EB5525; }
     .hero {
+      text-align: center;
       background: #1D0D5A;
+      padding: 60px 20px;
       color: white;
-      padding-top: 20px;
-      text-align: center;
     }
-    .carousel {
-      position: relative;
-      overflow: hidden;
-      height: 50vh;
-      max-height: 400px;
-      border-radius: 24px;
-      margin: 0 auto 20px auto;
-      width: calc(100vw - 10vw);
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    .hero h1 {
+      font-size: 40px;
+      animation: fadeSlideUp 1s ease forwards;
     }
-    .carousel-images {
-      display: flex;
-      width: 300%;
-      animation: slide 21s infinite ease-in-out;
-    }
-    .carousel-images img {
-      width: 100vw;
-      height: 50vh;
-      max-height: 400px;
-      object-fit: cover;
-      border-radius: 24px;
-    }
-    @keyframes slide {
-      0%, 30% { transform: translateX(0); }
-      33%, 63% { transform: translateX(-100vw); }
-      66%, 96% { transform: translateX(-200vw); }
-      100% { transform: translateX(0); }
-    }
-    .dots {
-      text-align: center;
-      margin-top: -20px;
-      position: relative;
-      z-index: 1;
-    }
-    .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background-color: #ccc;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-    .dot.active {
-      background-color: #EB5525;
-    }
-    .hero-text {
-      padding: 20px 10px 40px 10px;
-    }
-    .typing {
-      overflow: hidden;
-      white-space: nowrap;
-      margin: 0 auto;
-      letter-spacing: .05em;
-      width: 0;
-      animation: typing 4s steps(30, end) forwards;
-      position: relative;
-    }
-    .typing::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: 100%;
-      width: 2px;
-      background-color: white;
-      animation: blink-caret 0.8s step-end infinite, hide-caret 0s 4s forwards;
-    }
-    .typing2 {
+    .hero p {
+      font-size: 20px;
       opacity: 0;
-      animation: fadeIn 2s ease-in-out 4s forwards;
-      font-family: 'Segoe UI', 'Open Sans', sans-serif;
-      font-size: 17px;
-      font-weight: 500;
-      color: #fefefe;
-      text-align: center;
-      line-height: 1.5;
-      letter-spacing: 0.2px;
+      animation: fadeIn 2s ease-in-out 1s forwards;
     }
-    @keyframes blink-caret {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0; }
-    }
-    @keyframes hide-caret {
-      to { opacity: 0; }
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-    .section {
-      padding: 40px 5vw;
-      max-width: 1000px;
+    @keyframes fadeSlideUp { to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeIn { to { opacity: 1; } }
+    section {
+      padding: 60px 5vw;
+      max-width: 1200px;
       margin: auto;
     }
-    .section h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
       color: #1D0D5A;
+      border-bottom: 2px solid #EB5525;
+      display: inline-block;
     }
-    .courses, .why {
+    .two-col {
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .two-col div {
+      flex: 1;
+    }
+    .cards {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
     }
- .card {
-  min-height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: #ffffff;
-  padding: 24px;
-  border-radius: 18px 0 18px 0;
-  flex: 1 1 280px;
-  border: 2px solid #EB5525; /* orange border */
-  color: #1D0D5A;
-  font-weight: 600;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-  cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-5px);
-  background: #fff4ee;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-}
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1 1 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      background: #fff4ee;
+    }
+    .video-section iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 10px;
+    }
+    .cta {
+      background: #EB5525;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .cta p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .cta a {
+      background: white;
+      color: #EB5525;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .cta a:hover {
+      background: #fff0e0;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 14px;
+      background: #f1f1f1;
+      margin-top: 60px;
+    }
     .info-panel {
       position: fixed;
       top: 0;
@@ -206,310 +145,119 @@
       width: 350px;
       height: 100vh;
       overflow-y: auto;
-      overflow-x: hidden;
-      background: #ffffff;
+      background: #fff;
       box-shadow: -4px 0 20px rgba(0,0,0,0.1);
       padding: 20px;
       transition: right 0.3s ease;
       z-index: 1000;
     }
-    .info-panel::-webkit-scrollbar {
-      width: 6px;
-    }
-    .info-panel::-webkit-scrollbar-thumb {
-      background-color: #ccc;
-      border-radius: 10px;
-    }
     .info-panel.active {
       right: 0;
     }
-    .close-btn {
+    .info-panel button {
       background: transparent;
       border: none;
-      font-size: 20px;
+      font-size: 24px;
       float: right;
       cursor: pointer;
-    }
-    @media (max-width: 768px) {
-      .info-panel {
-        width: 100vw;
-      }
     }
   </style>
 </head>
 <body>
   <header>
     <div class="logo">
-      <a href="index.html">
-        <img src="NextIIM LOGO.png" alt="NextIIM Logo" />
-      </a>
+      <a href="index.html"><img src="NextIIM LOGO.png" alt="NextIIM Logo" /></a>
     </div>
     <nav>
-      <a href="#">Home</a>
-     <a href="about.html">About Us</a>
-      <a href="#courses">Courses</a>
-      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <a href="#mission">Vision</a>
+      <a href="#youtube">YouTube</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <div class="hero">
-    <div class="carousel">
-      <div class="carousel-images">
-        <img src="Slide1.png" alt="Slide 1" />
-        <img src="Slide2.png" alt="Slide 2" />
-        <img src="Slide3.png" alt="Slide 3" />
+    <h1>Next Begins Here</h1>
+    <p><em>Where IIM Dreams Take Their First Step</em></p>
+  </div>
+
+  <section id="about">
+    <h2>About NextIIM Prep</h2>
+    <div class="two-col">
+      <div>
+        <p>NextIIM is a mission-driven startup focused on helping Class 11–12 students crack top management entrances like IPMAT, JIPMAT, and DU JAT. Founded by Pragesh Chandra, an IIM Kashipur alumnus with 11+ years of experience in EdTech leadership, we believe in affordability, premium experience, and student-first mentorship.</p>
+      </div>
+      <div>
+        <img src="founder-image.jpg" alt="Founder Image" style="max-width:100%; border-radius: 10px;">
       </div>
     </div>
-    <div class="dots">
-      <span class="dot active" onclick="jumpToSlide(0)"></span>
-      <span class="dot" onclick="jumpToSlide(1)"></span>
-      <span class="dot" onclick="jumpToSlide(2)"></span>
-    </div>
-    <div class="hero-text">
-      <h2 class="typing">Next Begins Here</h2>
-      <p class="typing2"><em>Where IIM Dreams Take Their First Step</em></p>
-    </div>
-  </div>
+  </section>
 
-  <div class="section" id="courses">
-    <h3>All About Management Exams After 12th</h3>
-    <div class="courses">
-      <div class="card" onclick="showInfo('ipmat')">IPMAT (IIM Indore, IIM Rohtak, IIM Ranchi, IIM Amritsar, IIM Shillong)</div>
-      <div class="card" onclick="showInfo('jipmat')">JIPMAT (IIM Bodh Gaya, IIM Jammu)</div>
-      <div class="card" onclick="showInfo('bms')">DU JAT/BMS (Shaheed Sukhdev, CBS, etc.)</div>
-      <div class="card" onclick="showInfo('set')">SET (Symbiosis University BBA)</div>
-      <div class="card" onclick="showInfo('npat')">NPAT (NMIMS BBA)</div>
-      <div class="card" onclick="showInfo('christ')">Christ University BBA</div>
-      <div class="card" onclick="showInfo('xaviers')">St. Xavier’s Mumbai Entrance</div>
+  <section id="mission">
+    <h2>Our Mission & Vision</h2>
+    <div class="cards">
+      <div class="card">Empower 50,000+ students in Tier 2/3 cities for IIM success</div>
+      <div class="card">Offer NEP-aligned courses with tech + mentorship fusion</div>
+      <div class="card">Build the most trusted IPM prep platform in India</div>
     </div>
-  </div>
+  </section>
+
+  <section id="exams">
+    <h2>All About Exams After 12th</h2>
+    <div class="cards">
+      <div class="card" onclick="showInfo('ipmat')">IPMAT</div>
+      <div class="card" onclick="showInfo('jipmat')">JIPMAT</div>
+      <div class="card" onclick="showInfo('bms')">DU JAT / CUET BMS</div>
+      <div class="card" onclick="showInfo('set')">SET</div>
+      <div class="card" onclick="showInfo('npat')">NPAT</div>
+      <div class="card" onclick="showInfo('christ')">Christ University</div>
+      <div class="card" onclick="showInfo('xaviers')">St. Xavier’s Mumbai</div>
+    </div>
+  </section>
 
   <div class="info-panel" id="infoPanel">
-    <button class="close-btn" onclick="closeInfo()">×</button>
+    <button onclick="closeInfo()">×</button>
     <div id="infoContent">Details will appear here.</div>
   </div>
 
-  <div class="section">
-    <h3>Why Choose NextIIM?</h3>
-    <div class="why">
-      <div class="card">Top Mentors from IIMs</div>
-      <div class="card">1-on-1 Mentorship</div>
-      <div class="card">Affordable Plans with Premium Experience</div>
+  <section id="youtube">
+    <h2>NextIIM YouTube Channel</h2>
+    <div class="video-section">
+      <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=NextIIM" allowfullscreen></iframe>
     </div>
-  </div>
+  </section>
 
-  <div class="section" id="contact">
-    <h3>Contact Us</h3>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+  <section class="cta">
+    <h2>Stay Tuned for Our Courses</h2>
+    <p>We’re building India’s most premium prep experience. Until then, follow us on YouTube!</p>
+    <a href="https://www.youtube.com/@NextIIM" target="_blank">Subscribe Now</a>
+  </section>
 
   <footer>
-    &copy; 2025 NextIIM Prep. All rights reserved.
+    &copy; 2025 NextIIM Prep. Designed with ❤️ for IIM aspirants.
   </footer>
 
 <script>
-    const infoPanel = document.getElementById('infoPanel');
-    const infoContent = document.getElementById('infoContent');
+  const infoPanel = document.getElementById('infoPanel');
+  const infoContent = document.getElementById('infoContent');
 
-    function showInfo(exam) {
-      const content = {
-        ipmat: `
-          <h3>IPMAT (Integrated Program in Management Aptitude Test)</h3>
-          <p><strong>A great career opportunity right after Class 12 from IIMs.</strong></p>
-          <p><strong>Conducted by:</strong> IIM Indore and IIM Rohtak (separately)</p>
-          <p><strong>Score also accepted by:</strong> IIM Ranchi, IIM Amritsar, IIM Shillong</p>
-          <p><strong>Note:</strong> IIM Jammu and Bodh Gaya only accept JIPMAT</p>
-          <table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-            <thead>
-              <tr><th colspan="2">📘 IPMAT Indore</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Quant (MCQ)</td><td>~30 Qs, 40 mins</td></tr>
-              <tr><td>Quant (Short Ans)</td><td>~15 Qs, 40 mins</td></tr>
-              <tr><td>Verbal Ability (MCQ)</td><td>~45 Qs, 40 mins</td></tr>
-              <tr><td><strong>Total Duration</strong></td><td><strong>120 minutes</strong></td></tr>
-              <tr><td>Total Marks</td><td>100</td></tr>
-            </tbody>
-          </table>
-          <table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-            <thead>
-              <tr><th colspan="2">📘 IPMAT Rohtak</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Quant</td><td>40 Qs</td></tr>
-              <tr><td>Logical Reasoning</td><td>40 Qs</td></tr>
-              <tr><td>Verbal Ability</td><td>40 Qs</td></tr>
-              <tr><td><strong>Total Duration</strong></td><td><strong>120 minutes</strong></td></tr>
-              <tr><td>Total Marks</td><td>160</td></tr>
-            </tbody>
-          </table>
-          <p><strong>Eligibility:</strong> Class 12 passed/appearing, typically 60%+ marks</p>
-          <p><b>Age:</b> Born on/after Aug 1, 2005 (General)</p>
-          <p><strong>Selection:</strong> Written test + Personal Interview (depends on IIM)</p>
-          <p><strong>Why It Matters:</strong> Provides direct admission into IIMs & select top colleges like IIFT, Nirma, TAPMI, NALSAR, and Alliance via your IPMAT Indore score</p>
-        `,
-      // Keep other exams as-is for now. You can ask me later to update each one in full.
-      jipmat: `
-          <h3>JIPMAT (Joint Integrated Program in Management Aptitude Test)</h3>
-          <p><strong>A unique gateway to IIM Jammu & IIM Bodh Gaya straight after Class 12.</strong></p>
-          <p><strong>Conducted by:</strong> National Testing Agency (NTA)</p>
-          <p><strong>Accepted by:</strong> IIM Jammu and IIM Bodh Gaya</p>
-          <table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-            <thead>
-              <tr><th colspan="2">📘 JIPMAT Exam Structure</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>Quantitative Aptitude</td><td>33 Qs</td></tr>
-              <tr><td>Logical Reasoning</td><td>33 Qs</td></tr>
-              <tr><td>Verbal Ability</td><td>34 Qs</td></tr>
-              <tr><td><strong>Total Duration</strong></td><td><strong>150 minutes</strong></td></tr>
-              <tr><td>Total Marks</td><td>400</td></tr>
-            </tbody>
-          </table>
-          <p><strong>Eligibility:</strong> Passed Class 12 with minimum 60% (General); age limits may apply</p>
-          <p><strong>Selection:</strong> Based only on JIPMAT score (no interview)</p>
-          <p><strong>Why It Matters:</strong> One of the most accessible paths to IIMs with only one test and no PI</p>
-        `,
-      bms:  `
-        <h3>DU BMS (Bachelor of Management Studies)</h3>
-<p><strong>Top-rated undergraduate management program offered by Delhi University colleges.</strong></p>
-<p><strong>Conducted by:</strong> National Testing Agency (NTA) via <strong>CUET UG</strong></p>
-<p><strong>Top Colleges:</strong> Shaheed Sukhdev College of Business Studies (SSCBS), Deen Dayal Upadhyaya College, Keshav Mahavidyalaya, College of Vocational Studies, etc.</p>
-
-<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-  <thead>
-    <tr><th colspan="2">📘 CUET for BMS (General Pattern)</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>General Test</td><td>50 Qs (Aptitude, Reasoning, GK)</td></tr>
-    <tr><td>English</td><td>40–50 Qs</td></tr>
-    <tr><td>Maths (Optional)</td><td>40 Qs (for some colleges)</td></tr>
-    <tr><td><strong>Total Duration</strong></td><td><strong>2–2.5 hours</strong></td></tr>
-  </tbody>
-</table>
-
-<p><strong>Eligibility:</strong> Class 12 passed/appearing from any stream (some colleges require Maths in 12th)</p>
-<p><strong>Admission Process:</strong> Based on CUET UG score + centralized DU counseling via Common Seat Allocation System (CSAS)</p>
-<p><strong>Why It Matters:</strong> DU BMS is among the most competitive UG management programs in India with top-tier placements and faculty.</p>
-`,
-      set: `
-        <h3>SET – Symbiosis Entrance Test (BBA)</h3>
-<p><strong>Entrance exam for Symbiosis International (Deemed) University’s BBA programs.</strong></p>
-<p><strong>Conducted by:</strong> Symbiosis International University</p>
-<p><strong>Accepted by:</strong> Symbiosis Pune (SCMS), Noida, Nagpur, Hyderabad</p>
-
-<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-  <thead>
-    <tr><th colspan="2">📘 SET BBA Exam Structure</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>General English</td><td>16 Qs</td></tr>
-    <tr><td>Quantitative Aptitude</td><td>16 Qs</td></tr>
-    <tr><td>General Awareness</td><td>16 Qs</td></tr>
-    <tr><td>Analytical & Logical Reasoning</td><td>12 Qs</td></tr>
-    <tr><td><strong>Total Marks</strong></td><td><strong>60</strong></td></tr>
-    <tr><td><strong>WAT (Essay)</strong></td><td>Yes – post-exam (15 mins)</td></tr>
-  </tbody>
-</table>
-
-<p><strong>Mode:</strong> Computer-Based Test (CBT)</p>
-<p><strong>Eligibility:</strong> Passed/appearing Class 12 (any stream)</p>
-<p><strong>Selection:</strong> Based on SET score + PI-WAT rounds</p>
-<p><strong>Why It Matters:</strong> SCMS Pune and other Symbiosis campuses offer excellent infrastructure, industry exposure, and placements.</p>
-`,
-      npat: `
-       <h3>NPAT (NMIMS Programs After Twelfth)</h3>
-       <p><strong>Official entrance exam for BBA & other UG programs at NMIMS campuses.</strong></p>
-       <p><strong>Conducted by:</strong> NMIMS University (Deemed to be University)</p>
-       <p><strong>Accepted by:</strong> NMIMS Mumbai, Navi Mumbai, Bengaluru, Hyderabad, Indore, Shirpur</p>
-
-<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-  <thead>
-    <tr><th colspan="2">📘 NPAT Exam Structure</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Quantitative & Numerical Ability</td><td>40 Qs</td></tr>
-    <tr><td>Logical Reasoning</td><td>40 Qs</td></tr>
-    <tr><td>Verbal Ability</td><td>40 Qs</td></tr>
-    <tr><td><strong>Total Duration</strong></td><td><strong>100 minutes</strong></td></tr>
-    <tr><td>Total Marks</td><td>120</td></tr>
-  </tbody>
-</table>
-
-<p><strong>Eligibility:</strong> Passed/appearing in Class 12 (any stream). Minimum 60% for Mumbai campus.</p>
-<p><strong>Mode:</strong> Online, Proctored from Home or Test Centre (varies yearly)</p>
-<p><strong>Courses Offered:</strong> BBA, B.Com (Hons), B.Sc Finance, Branding & Advertising, Liberal Arts</p>
-<p><strong>Why It Matters:</strong> NMIMS BBA is among the top private UG management programs in India, with great placements and international exposure.</p>
-`,
-      christ: `
-        <h3>Christ University BBA Entrance</h3>
-<p><strong>Institutional-level entrance test for various BBA specializations.</strong></p>
-<p><strong>Conducted by:</strong> Christ (Deemed to be University)</p>
-<p><strong>Campuses:</strong> Bengaluru (Main), Delhi NCR, Pune-Lavasa, and others</p>
-
-<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-  <thead>
-    <tr><th colspan="2">📘 Christ BBA Entrance Pattern</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>English Language</td><td>25 Qs</td></tr>
-    <tr><td>General Knowledge</td><td>20 Qs</td></tr>
-    <tr><td>Quantitative Aptitude</td><td>20 Qs</td></tr>
-    <tr><td>Reasoning</td><td>25 Qs</td></tr>
-    <tr><td>Data Analysis & Interpretation</td><td>10 Qs</td></tr>
-    <tr><td><strong>Total</strong></td><td><strong>100 Qs, 120 mins</strong></td></tr>
-  </tbody>
-</table>
-
-<p><strong>Selection Process:</strong> Entrance Test + Micro Presentation + Personal Interview</p>
-<p><strong>Why It Matters:</strong> Christ is a top private university with diverse BBA options and strong academic culture.</p>
-`,
-      xaviers: `
-        <h3>St. Xavier’s BMS Entrance Test</h3>
-<p><strong>Institute-level entrance test for the Bachelor of Management Studies program.</strong></p>
-<p><strong>Conducted by:</strong> St. Xavier’s College (Autonomous), Mumbai</p>
-
-<table border="1" cellpadding="6" style="width:100%;margin:10px 0;border-collapse: collapse;">
-  <thead>
-    <tr><th colspan="2">📘 Xavier’s BMS Entrance Pattern</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>English Language & Comprehension</td><td>20 Qs</td></tr>
-    <tr><td>Logical Reasoning</td><td>20 Qs</td></tr>
-    <tr><td>Quantitative Skills</td><td>20 Qs</td></tr>
-    <tr><td>General Knowledge & Current Affairs</td><td>20 Qs</td></tr>
-    <tr><td>Critical Thinking</td><td>20 Qs</td></tr>
-    <tr><td><strong>Total</strong></td><td><strong>100 Qs</strong></td></tr>
-  </tbody>
-</table>
-
-<p><strong>Eligibility:</strong> Passed Class 12 with minimum marks; age restrictions apply</p>
-<p><strong>Selection:</strong> Entrance Test + Academic Performance (Class 12)</p>
-<p><strong>Why It Matters:</strong> Xavier’s Mumbai is one of India’s most prestigious institutions for liberal and management education.</p>
-` ,
+  function showInfo(exam) {
+    const content = {
+      ipmat: `<h3>IPMAT</h3><p>Details about IPMAT coming soon.</p>`,
+      jipmat: `<h3>JIPMAT</h3><p>Details about JIPMAT coming soon.</p>`,
+      bms: `<h3>CUET BMS</h3><p>Details about DU BMS coming soon.</p>`,
+      set: `<h3>SET</h3><p>Details about SET coming soon.</p>`,
+      npat: `<h3>NPAT</h3><p>Details about NPAT coming soon.</p>`,
+      christ: `<h3>Christ BBA</h3><p>Details about Christ University coming soon.</p>`,
+      xaviers: `<h3>St. Xavier’s Mumbai</h3><p>Details about Xavier’s coming soon.</p>`
     };
-      infoContent.innerHTML = content[exam] || '<p>Details not available.</p>';
-      infoPanel.classList.add('active');
-    }
+    infoContent.innerHTML = content[exam] || '<p>Details not available.</p>';
+    infoPanel.classList.add('active');
+  }
+  function closeInfo() {
+    infoPanel.classList.remove('active');
+  }
+</script>
 
-    function closeInfo() {
-      infoPanel.classList.remove('active');
-    }
-
-    function jumpToSlide(index) {
-      const images = document.querySelector('.carousel-images');
-      images.style.transition = 'transform 0.6s ease-in-out';
-      images.style.transform = `translateX(-${index * 100}vw)`;
-      document.querySelectorAll('.dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-      });
-    }
-  </script>
 </body>
 </html>
