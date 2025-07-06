@@ -24,7 +24,7 @@
       min-height: 100%;
       overflow-y: auto;
     }
-    header {
+   header {
   position: sticky;
   top: 0;
   z-index: 999;
@@ -38,7 +38,13 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   flex-wrap: wrap;
   transition: all 0.3s ease;
-    }
+}
+
+/* 👇 This triggers on scroll */
+header.scrolled {
+  background-color: #ffffffef;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
     .logo img {
       height: 70px;
       width: auto;
@@ -516,14 +522,12 @@
     }
   </script>
   <script>
-  window.addEventListener('scroll', () => {
+  window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
     if (window.scrollY > 20) {
-      header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.12)';
-      header.style.backgroundColor = '#ffffffef';
+      header.classList.add('scrolled');
     } else {
-      header.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.05)';
-      header.style.backgroundColor = '#ffffffd9';
+      header.classList.remove('scrolled');
     }
   });
 </script>
