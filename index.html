@@ -464,6 +464,32 @@ header nav a {
   50% { transform: translateY(-10px); }
   100% { transform: translateY(0px); }
 }
+    .two-column-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.left-content {
+  flex: 1 1 55%;
+}
+
+.right-image {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 
     .ipm-description {
   font-size: 16px;
@@ -572,10 +598,9 @@ header nav a {
     </div>
   </div>
 </section>
-   <div class="section" id="courses">
-  <h3 class="section-title">Explore Top Management Exams After <strong>Class 12</strong></h3>
-   <div class="cuet-flex-wrap">
-    <!-- Left: Tiles -->
+  <div class="section two-column-section" id="courses">
+  <div class="left-content">
+    <h3 class="section-title">Explore Top Management Exams After <strong>Class 12</strong></h3>
     <div class="cuet-style">
       <div class="cuet-card" onclick="showInfo('ipmat')">🎯 IPMAT<br /><span>IIM Indore, Rohtak, Ranchi...</span></div>
       <div class="cuet-card" onclick="showInfo('jipmat')">📘 JIPMAT<br /><span>IIM Jammu, Bodh Gaya</span></div>
@@ -586,10 +611,9 @@ header nav a {
       <div class="cuet-card" onclick="showInfo('xaviers')">🧠 St. Xavier’s<br /><span>Mumbai BMS</span></div>
     </div>
 
-    <!-- Right: Image -->
-    <div class="cuet-image">
-      <img src="graduation-girl.png" alt="Graduation" />
-    </div>
+   </div>
+  <div class="right-image">
+    <img src="graduate-girl.png" alt="Graduate Image" />
   </div>
 </div>
 
