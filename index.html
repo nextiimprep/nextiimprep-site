@@ -310,7 +310,7 @@ header nav a {
     </div>
     <nav>
       <a href="#">Home</a>
-     <a href="about.html">About Us</a>
+    <a href="#about">About Us</a>
       <a href="#courses">Courses</a>
       <a href="#blog">Blog</a>
       <a href="#contact">Contact</a>
@@ -367,6 +367,50 @@ header nav a {
     <img src="logos/iift.png" alt="IIFT" />
   </div>
 </div>
+<section id="about" style="padding: 60px 20px; background: #f8f9fa; color: #1D0D5A;">
+  <div class="container" style="max-width: 1200px; margin: auto;">
+    <div class="about-nextiim" style="display: flex; align-items: center; gap: 40px; margin-bottom: 60px; flex-wrap: wrap;">
+      <img src="NextIIM icon LOGO 1.png" alt="NextIIM Logo" style="width: 250px; max-width: 100%;">
+      <div class="text" style="flex: 1;">
+        <h2 style="font-size: 18px; color: #EB5525; margin-bottom: 6px; text-transform: uppercase;">About NextIIM Prep</h2>
+        <h1 style="font-size: 32px; color: #1D0D5A; margin-bottom: 6px;"><strong>Next Begins Here</strong></h1>
+        <p class="tagline" style="font-size: 20px; font-style: italic; color: #1D0D5A; margin-top: -6px; margin-bottom: 10px;">Where IIM Dreams Take Their First Step</p>
+        <p><strong>NextIIM Prep</strong> is a mission-driven initiative designed to help aspirants crack India’s top management entrance exams after Class 12. We are building the most student-centric, affordable, and premium preparation platform, focused on exams like IPMAT, JIPMAT, DU JAT, SET, NPAT, Christ, and more.</p>
+      </div>
+    </div>
+
+    <div class="tabs" style="display: flex; gap: 20px; margin-bottom: 20px;">
+      <button class="tab-button" onclick="showTab('vision')" style="padding: 10px 20px; font-size: 16px; font-weight: bold; background-color: #fff; color: #1D0D5A; border-radius: 8px; border: 1px solid #ccc; cursor: pointer;">👁️ Our Vision</button>
+      <button class="tab-button active" onclick="showTab('mission')" style="padding: 10px 20px; font-size: 16px; font-weight: bold; background-color: #EB5525; color: white; border-radius: 8px; border: 1px solid #EB5525; cursor: pointer;">📍 Our Mission</button>
+    </div>
+
+    <div id="vision" class="tab-content" style="display:none; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+      <p>To democratize access to IIMs and top B-schools for every student – regardless of location, background, or affordability.</p>
+    </div>
+    <div id="mission" class="tab-content" style="background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+      <p>Building India's most trusted learning platform that delivers affordable, high-quality education and job-ready skills in local languages—helping every learner in Bharat learn, grow, and succeed from anywhere.</p>
+    </div>
+
+    <div class="section" style="display: flex; align-items: center; gap: 40px; margin-top: 60px; flex-wrap: wrap;">
+      <img src="founder.jpg" alt="Pragesh Chandra" style="width: 50%; border-radius: 100px 0 0 100px; box-shadow: 0 8px 30px rgba(0,0,0,0.08); max-width: 100%;">
+      <div class="section-content" style="flex: 1;">
+        <h2 style="font-size: 24px; margin-top: 40px; margin-bottom: 15px; color: #EB5525;">About the Founder</h2>
+        <p><strong>Pragesh Chandra</strong>, <strong>IIM Kashipur alumnus</strong> and former <strong>Lenovo India</strong> engineer, founded <em>NextIIM Prep</em> after 11+ years in education. He has led roles at <strong>Sankalp Bharat, Adda247, Mahendras</strong>, and <strong>Career Launcher</strong>, and cracked <strong>GATE, CAT, GMAT, SSC CGL, IBPS</strong>.</p>
+        <p>His goal: make UG management prep more accessible, guided, and effective for every aspirant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showTab(tabId) {
+    document.getElementById('vision').style.display = 'none';
+    document.getElementById('mission').style.display = 'none';
+    document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(tabId).style.display = 'block';
+    event.target.classList.add('active');
+  }
+</script>
 
   <div class="section" id="courses">
     <h3>All About Management Exams After 12th</h3>
