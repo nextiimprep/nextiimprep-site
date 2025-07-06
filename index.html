@@ -500,7 +500,39 @@ header nav a {
   max-width: 900px;
 }
 
+.grid-with-image {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
 
+.tile-grid {
+  flex: 1 1 65%;
+}
+
+.cuet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.grid-image {
+  flex: 1 1 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+</style>
   </style>
 </head>
 <body>
@@ -598,20 +630,21 @@ header nav a {
     </div>
   </div>
 </section>
-<div class="section cuet-flex-wrap" id="courses">
-  <div class="left-content">
+<div class="section grid-with-image" id="courses">
+  <div class="tile-grid">
     <h3 class="section-title">Explore Top Management Exams After <strong>Class 12</strong></h3>
-  <div class="cuet-style">
-    <div class="cuet-card">🎯 IPMAT<br /><span>IIM Indore, Rohtak, Ranchi...</span></div>
-    <div class="cuet-card">📘 JIPMAT<br /><span>IIM Jammu, Bodh Gaya</span></div>
-    <div class="cuet-card">🏛️ DU BMS<br /><span>Shaheed Sukhdev, CBS</span></div>
-    <div class="cuet-card">🎓 SET<br /><span>Symbiosis BBA</span></div>
-    <div class="cuet-card">📊 NPAT<br /><span>NMIMS BBA</span></div>
-    <div class="cuet-card">🙏 Christ<br /><span>Christ Univ. BBA</span></div>
-    <div class="cuet-card">🧠 St. Xavier’s<br /><span>Mumbai BMS</span></div>
+    <div class="cuet-grid">
+      <div class="cuet-card" onclick="showInfo('ipmat')">🎯 IPMAT<br /><span>IIM Indore, Rohtak, Ranchi...</span></div>
+      <div class="cuet-card" onclick="showInfo('jipmat')">📘 JIPMAT<br /><span>IIM Jammu, Bodh Gaya</span></div>
+      <div class="cuet-card" onclick="showInfo('bms')">🏛️ DU BMS<br /><span>Shaheed Sukhdev, CBS</span></div>
+      <div class="cuet-card" onclick="showInfo('set')">🎓 SET<br /><span>Symbiosis BBA</span></div>
+      <div class="cuet-card" onclick="showInfo('npat')">📊 NPAT<br /><span>NMIMS BBA</span></div>
+      <div class="cuet-card" onclick="showInfo('christ')">🙏 Christ<br /><span>Christ Univ. BBA</span></div>
+      <div class="cuet-card" onclick="showInfo('xaviers')">🧠 St. Xavier’s<br /><span>Mumbai BMS</span></div>
+    </div>
   </div>
-  <div class="exam-right">
-   <img src="graduation-girl.png" alt="Graduate Image" />
+  <div class="grid-image">
+    <img src="graduation-girl.png" alt="Graduate Girl" />
   </div>
 </div>
 
