@@ -260,8 +260,43 @@ header nav a {
     @media (max-width: 768px) {
       .info-panel {
         width: 100vw;
-      }
+      } 
     }
+
+    .logo-scroll-section {
+  background-color: #ffffff;
+  padding: 20px 0;
+  overflow: hidden;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-scroll {
+  display: flex;
+  gap: 40px;
+  animation: scrollLeft 60s linear infinite;
+  align-items: center;
+  width: max-content;
+}
+
+.logo-scroll img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+.logo-scroll img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
   </style>
 </head>
 <body>
@@ -297,6 +332,22 @@ header nav a {
       <h2 class="typing">Next Begins Here</h2>
       <p class="typing2"><em>Where IIM Dreams Take Their First Step</em></p>
     </div>
+  </div>
+  <div class="logo-scroll-section">
+  <div class="logo-scroll">
+    <img src="logos/iimindore.png" alt="IIM Indore" />
+    <img src="logos/iimrohtak.png" alt="IIM Rohtak" />
+    <img src="logos/iimranchi.png" alt="IIM Ranchi" />
+    <img src="logos/iimamritsar.png" alt="IIM Amritsar" />
+    <img src="logos/iimshillong.png" alt="IIM Shillong" />
+    <img src="logos/iimjammu.png" alt="IIM Jammu" />
+    <img src="logos/iimbodhgaya.png" alt="IIM Bodh Gaya" />
+    <img src="logos/iimnagpur.png" alt="IIM Nagpur" />
+    <img src="logos/iimsirmaur.png" alt="IIM Sirmaur" />
+    <img src="logos/iimvizag.png" alt="IIM Vizag" />
+    <img src="logos/nirma.png" alt="Nirma" />
+    <img src="logos/nalsar.png" alt="NALSAR" />
+    <img src="logos/iift.png" alt="IIFT" />
   </div>
 
   <div class="section" id="courses">
