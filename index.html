@@ -42,8 +42,9 @@
 
 /* 👇 This triggers on scroll */
 header.scrolled {
-  background-color: #ffffffef;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;  /* solid white for clearer contrast */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(0);   /* optional, safe fallback */
 }
     .logo img {
       height: 70px;
@@ -524,6 +525,7 @@ header.scrolled {
   <script>
   window.addEventListener('scroll', function () {
     const header = document.querySelector('header');
+    console.log("Scroll Y:", window.scrollY); // 👈 DEBUG: confirms scroll is working
     if (window.scrollY > 20) {
       header.classList.add('scrolled');
     } else {
