@@ -503,6 +503,25 @@ header nav a {
   font-size: 14px;
 }
 
+.benefit-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 340px;
+  text-align: center;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.benefit-card .icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
 
 </style>
   </style>
@@ -619,7 +638,53 @@ header nav a {
     <button class="close-btn" onclick="closeInfo()">×</button>
     <div id="infoContent">Details will appear here.</div>
   </div>
+
+    <section class="what-sets-us-apart">
+  <h2 style="text-align: center; font-size: 32px; font-weight: 700; margin-bottom: 40px;">
+    What You’ll Get at <span style="color: #1D0D5A;">NextIIM</span>
+  </h2>
   
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; max-width: 1200px; margin: 0 auto;">
+    
+    <div class="benefit-card">
+      <div class="icon">🎓</div>
+      <h3>Trained by Real IIM Experts</h3>
+      <p>Learn directly from mentors who’ve cracked IIMs — no theory, just proven strategies.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">💡</div>
+      <h3>Smart Prep, Not Just Hard Work</h3>
+      <p>We focus on how toppers think and win. You prep smarter, not harder.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">👨‍🏫</div>
+      <h3>1:1 Mentorship from Day Zero</h3>
+      <p>No mass batches. Get personalised doubt-solving and real-time support.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">💰</div>
+      <h3>Premium Prep, Affordable Price</h3>
+      <p>Don’t burn lakhs. We’re building India’s best affordable IPM prep platform.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">📚</div>
+      <h3>Multi-Exam Coverage</h3>
+      <p>Be ready for IPMAT, JIPMAT, DU BMS, NPAT & more — all under one plan.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="icon">🚀</div>
+      <h3>Early Joiners = More Edge</h3>
+      <p>More attention, deeper mentorship, faster growth. Start early, win early.</p>
+    </div>
+
+  </div>
+</section>
+
 <section id="about" style="padding: 60px 20px; background: #f8f9fa; color: #1D0D5A;">
   <div class="container" style="max-width: 1200px; margin: auto;">
     <div class="about-nextiim" style="display: flex; align-items: center; gap: 40px; margin-bottom: 60px; flex-wrap: wrap;">
