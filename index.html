@@ -431,6 +431,40 @@ header nav a {
   font-size: 14px;
   color: #666;
 }
+    .cuet-flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.cuet-style {
+  flex: 1 1 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cuet-image {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.cuet-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* Optional animation effect */
+@keyframes floatUpDown {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
     .ipm-description {
   font-size: 16px;
   color: #1D0D5A;
