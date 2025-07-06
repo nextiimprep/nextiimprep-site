@@ -625,106 +625,77 @@ header nav a {
     left: 12px;
   }
 }
-/* ✅ COMMUNITY SECTION STYLING */
 .community-join-section {
-  padding: 80px 20px;
+  background-color: #fdf4f0;
+  padding: 60px 20px;
   text-align: center;
-  background: #f9f9fb;
+  border-radius: 24px;
 }
 
 .community-heading {
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 700;
+  color: #1D0D5A;
   margin-bottom: 10px;
 }
 
 .highlight-nextiim {
-  background-color: #1D0D5A;
-  color: white;
-  padding: 2px 12px;
-  border-radius: 8px;
+  color: #EB5525;
 }
 
 .community-subtext {
-  color: #555;
+  color: #444;
   font-size: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .community-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .community-card {
-  flex: 1 1 280px;
-  max-width: 300px;
-  background: linear-gradient(135deg, #ffffff, #f0f0f0);
-  padding: 30px 20px;
-  border-radius: 18px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  background: white;
+  padding: 25px 20px;
+  width: 280px;
+  border-radius: 16px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.community-card .icon {
-  font-size: 36px;
-  margin-bottom: 15px;
-}
-
-.community-card h3 {
-  font-size: 20px;
-  margin: 10px 0;
-  color: #1D0D5A;
-}
-
-.community-card p {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 8px 18px;
-  background-color: #EB5525;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #c9441e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .community-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-/* Optional gradients per card */
-.community-card.youtube {
-  background: linear-gradient(135deg, #fff5f0, #ffe6e0);
+.icon-img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 15px;
 }
 
-.community-card.instagram {
-  background: linear-gradient(135deg, #f7e8ff, #e8dcf8);
+.cta-button {
+  margin-top: 15px;
+  display: inline-block;
+  background-color: #EB5525;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
 }
 
-.community-card.telegram {
-  background: linear-gradient(135deg, #e8f5ff, #dceeff);
+.cta-button:hover {
+  background-color: #cf4217;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .community-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 </style>
 
 </style>
@@ -947,7 +918,7 @@ header nav a {
 </script>
 
 
- <!-- ✅ COMMUNITY SECTION START -->
+<!-- ✅ COMMUNITY SECTION START -->
 <section class="community-join-section">
   <h2 class="community-heading">Join the <span class="highlight-nextiim">NextIIM</span> Community</h2>
   <p class="community-subtext">One destination for smart prep, real stories & constant growth.</p>
@@ -955,7 +926,7 @@ header nav a {
   <div class="community-cards">
     <!-- YouTube -->
     <div class="community-card youtube">
-      <div class="icon">🎥</div>
+      <img src="icons/youtube.png" alt="YouTube Icon" class="icon-img" />
       <h3>Power-Packed Lectures</h3>
       <p>Subscribe for IIM prep strategies, topper tips, and expert masterclasses.</p>
       <a href="https://www.youtube.com/@NextIIM" target="_blank" class="cta-button">Subscribe</a>
@@ -963,7 +934,7 @@ header nav a {
 
     <!-- Instagram -->
     <div class="community-card instagram">
-      <div class="icon">📸</div>
+      <img src="icons/instagram.png" alt="Instagram Icon" class="icon-img" />
       <h3>Life @NextIIM</h3>
       <p>Get inspired daily — from memes to motivation, follow our journey.</p>
       <a href="https://www.instagram.com/nextiim/" target="_blank" class="cta-button">Follow</a>
@@ -971,13 +942,14 @@ header nav a {
 
     <!-- Telegram -->
     <div class="community-card telegram">
-      <div class="icon">📲</div>
+      <img src="icons/telegram.png" alt="Telegram Icon" class="icon-img" />
       <h3>Direct Updates & PDFs</h3>
       <p>Join our Telegram for daily quizzes, notes, updates & discussion threads.</p>
       <a href="https://t.me/nextIIM" target="_blank" class="cta-button">Join</a>
     </div>
   </div>
 </section>
+
 
   <footer>
     &copy; 2025 NextIIM Prep. All rights reserved.
