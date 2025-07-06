@@ -304,6 +304,77 @@ header nav a {
     transform: translateX(-50%);
   }
 }
+    .exam-info-section {
+  background: #faf8ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.exam-info-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.exam-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #1D0D5A;
+  margin-bottom: 10px;
+}
+
+.exam-title .highlight {
+  background: #d8e7ff;
+  color: #EB5525;
+  padding: 0 8px;
+  border-radius: 4px;
+}
+
+.exam-description {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.exam-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.highlight-tile {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  padding: 30px 20px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  transition: 0.3s;
+}
+
+.highlight-tile img {
+  width: 50px;
+  margin-bottom: 15px;
+}
+
+.highlight-tile h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1D0D5A;
+}
+
+.highlight-tile p {
+  font-size: 15px;
+  color: #555;
+}
+
+.highlight-tile.active {
+  border: 2px solid #EB5525;
+  background: #fff5f0;
+}
 
   </style>
 </head>
@@ -374,6 +445,32 @@ header nav a {
     <img src="logos/iift.png" alt="IIFT" />
   </div>
 </div>
+  <section class="exam-info-section">
+  <div class="exam-info-container">
+    <h2 class="exam-title">What is <span class="highlight">IPMAT & BMS?</span></h2>
+    <p class="exam-description">
+      IPMAT, JIPMAT, and BMS entrance exams are your gateway to India’s top IIMs and B-Schools right after Class 12. These exams offer direct admission into prestigious 5-year Integrated Management Programs.
+    </p>
+
+    <div class="exam-highlights">
+      <div class="highlight-tile">
+        <img src="icons/target.png" alt="Target Icon" />
+        <h3>One Exam, Multiple Colleges</h3>
+        <p>Crack a single exam and unlock seats in IIM Indore, Rohtak, Ranchi, and more.</p>
+      </div>
+      <div class="highlight-tile active">
+        <img src="icons/transparent.png" alt="Transparent Icon" />
+        <h3>Direct IIM Admission After Class 12</h3>
+        <p>No need to wait for CAT – start your IIM journey immediately after school.</p>
+      </div>
+      <div class="highlight-tile">
+        <img src="icons/leaderboard.png" alt="Merit Icon" />
+        <h3>Merit-Based Selection</h3>
+        <p>Your aptitude and performance matter – not just board marks or background.</p>
+      </div>
+    </div>
+  </div>
+</section>
 <section id="about" style="padding: 60px 20px; background: #f8f9fa; color: #1D0D5A;">
   <div class="container" style="max-width: 1200px; margin: auto;">
     <div class="about-nextiim" style="display: flex; align-items: center; gap: 40px; margin-bottom: 60px; flex-wrap: wrap;">
