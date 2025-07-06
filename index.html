@@ -262,41 +262,43 @@ header nav a {
         width: 100vw;
       } 
     }
-
-    .logo-scroll-section {
+.logo-scroll-section {
+  width: 100%;
   background-color: #ffffff;
-  padding: 20px 0;
+  padding: 30px 0; /* Increase height */
   overflow: hidden;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .logo-scroll {
   display: flex;
-  gap: 40px;
-  animation: scrollLeft 60s linear infinite;
   align-items: center;
+  gap: 60px;
+  animation: scrollLeft 40s linear infinite;
   width: max-content;
 }
 
 .logo-scroll img {
-  height: 80px;
-  width: 80px;
+  height: 100px; /* slightly larger height */
+  width: 100px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
+
 .logo-scroll img:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
 @keyframes scrollLeft {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
   }
 }
+
   </style>
 </head>
 <body>
@@ -333,7 +335,7 @@ header nav a {
       <p class="typing2"><em>Where IIM Dreams Take Their First Step</em></p>
     </div>
   </div>
-  <div class="logo-scroll-section">
+ <div class="logo-scroll-section">
   <div class="logo-scroll">
     <img src="logos/iimindore.png" alt="IIM Indore" />
     <img src="logos/iimrohtak.png" alt="IIM Rohtak" />
@@ -349,6 +351,7 @@ header nav a {
     <img src="logos/nalsar.png" alt="NALSAR" />
     <img src="logos/iift.png" alt="IIFT" />
   </div>
+</div>
 
   <div class="section" id="courses">
     <h3>All About Management Exams After 12th</h3>
