@@ -626,76 +626,105 @@ header nav a {
   }
 }
 .community-join-section {
-  background-color: #fdf4f0;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
-  border-radius: 24px;
+  background: #f9f9fb;
 }
 
 .community-heading {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
-  color: #1D0D5A;
   margin-bottom: 10px;
 }
 
 .highlight-nextiim {
-  color: #EB5525;
+  background-color: #1D0D5A;
+  color: white;
+  padding: 2px 12px;
+  border-radius: 8px;
 }
 
 .community-subtext {
-  color: #444;
+  color: #555;
   font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .community-cards {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
 .community-card {
-  background: white;
-  padding: 25px 20px;
-  width: 280px;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  flex: 1 1 280px;
+  max-width: 300px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
-.community-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.icon-img {
+.community-card .icon {
   width: 48px;
   height: 48px;
   margin-bottom: 15px;
+  object-fit: contain;
+}
+.community-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #1D0D5A;
+}
+
+.community-card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .cta-button {
-  margin-top: 15px;
   display: inline-block;
+  padding: 8px 18px;
   background-color: #EB5525;
   color: white;
-  padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #cf4217;
+  background-color: #c9441e;
 }
 
+.community-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Optional gradients per card */
+.community-card.youtube {
+  background: linear-gradient(135deg, #fff5f0, #ffe6e0);
+}
+
+.community-card.instagram {
+  background: linear-gradient(135deg, #f7e8ff, #e8dcf8);
+}
+
+.community-card.telegram {
+  background: linear-gradient(135deg, #e8f5ff, #dceeff);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .community-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>
 
 </style>
