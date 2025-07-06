@@ -625,7 +625,106 @@ header nav a {
     left: 12px;
   }
 }
+/* ✅ COMMUNITY SECTION STYLING */
+.community-join-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f9f9fb;
+}
 
+.community-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.highlight-nextiim {
+  background-color: #1D0D5A;
+  color: white;
+  padding: 2px 12px;
+  border-radius: 8px;
+}
+
+.community-subtext {
+  color: #555;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.community-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.community-card {
+  flex: 1 1 280px;
+  max-width: 300px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  padding: 30px 20px;
+  border-radius: 18px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.community-card .icon {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.community-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #1D0D5A;
+}
+
+.community-card p {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 8px 18px;
+  background-color: #EB5525;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #c9441e;
+}
+
+.community-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Optional gradients per card */
+.community-card.youtube {
+  background: linear-gradient(135deg, #fff5f0, #ffe6e0);
+}
+
+.community-card.instagram {
+  background: linear-gradient(135deg, #f7e8ff, #e8dcf8);
+}
+
+.community-card.telegram {
+  background: linear-gradient(135deg, #e8f5ff, #dceeff);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .community-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>
 
 </style>
@@ -848,24 +947,37 @@ header nav a {
 </script>
 
 
-  <div class="section">
-    <h3>Why Choose NextIIM?</h3>
-    <div class="why">
-      <div class="card">Top Mentors from IIMs</div>
-      <div class="card">1-on-1 Mentorship</div>
-      <div class="card">Affordable Plans with Premium Experience</div>
+ <!-- ✅ COMMUNITY SECTION START -->
+<section class="community-join-section">
+  <h2 class="community-heading">Join the <span class="highlight-nextiim">NextIIM Tribe</span></h2>
+  <p class="community-subtext">One destination for smart prep, real stories & constant growth.</p>
+
+  <div class="community-cards">
+    <!-- YouTube -->
+    <div class="community-card youtube">
+      <div class="icon">🎥</div>
+      <h3>Power-Packed Lectures</h3>
+      <p>Subscribe for IIM prep strategies, topper tips, and expert masterclasses.</p>
+      <a href="https://www.youtube.com/@NextIIM" target="_blank" class="cta-button">Subscribe</a>
+    </div>
+
+    <!-- Instagram -->
+    <div class="community-card instagram">
+      <div class="icon">📸</div>
+      <h3>Life @NextIIM</h3>
+      <p>Get inspired daily — from memes to motivation, follow our journey.</p>
+      <a href="https://instagram.com/nextiimprep" target="_blank" class="cta-button">Follow</a>
+    </div>
+
+    <!-- Telegram -->
+    <div class="community-card telegram">
+      <div class="icon">📲</div>
+      <h3>Direct Updates & PDFs</h3>
+      <p>Join our Telegram for daily quizzes, notes, updates & discussion threads.</p>
+      <a href="https://t.me/nextiimprep" target="_blank" class="cta-button">Join</a>
     </div>
   </div>
-
-  <div class="section" id="contact">
-    <h3>Contact Us</h3>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </div>
+</section>
 
   <footer>
     &copy; 2025 NextIIM Prep. All rights reserved.
