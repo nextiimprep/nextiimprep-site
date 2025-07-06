@@ -403,15 +403,18 @@ header nav a {
   font-weight: 600;
   color: #1D0D5A;
   font-size: 18px;
-  border: 2px solid #EB5525;
+  border: 2px solid transparent;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .cuet-card:hover {
   background: #fff4ee;
-  transform: translateY(-4px);
+  transform: translateY(-5px);
+  border-color: #EB5525;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
+
 
 .cuet-card span {
   display: block;
