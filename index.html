@@ -740,6 +740,105 @@ header nav a {
   border-radius: 8px;
 }
 
+    <style>
+.footer {
+  background: #1D0D5A;
+  color: #fff;
+  padding: 60px 20px 30px;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #EB5525;
+  padding-bottom: 6px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #EB5525;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 16px;
+}
+
+.footer-desc {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-bottom {
+  border-top: 1px solid #555;
+  margin-top: 40px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.footer-policy-links a {
+  color: #aaa;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.footer-policy-links a:hover {
+  color: #EB5525;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  .footer-policy-links a {
+    display: inline-block;
+    margin: 5px;
+  }
+}
+</style>
+<!-- ✅ FOOTER CSS END -->
+
+
 </style>
 
 </style>
@@ -994,9 +1093,65 @@ header nav a {
 </section>
 
 
-  <footer>
-    &copy; 2025 NextIIM Prep. All rights reserved.
-  </footer>
+ <!-- ✅ FOOTER SECTION START -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Column 1 -->
+    <div class="footer-column">
+      <img src="/assets/logo-white.png" alt="NextIIM Logo" class="footer-logo">
+      <p class="footer-desc">India’s smartest IPMAT prep destination — focused, affordable, and personal.</p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div class="footer-column">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#community">Communities</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: IPM & BMS Program Links -->
+    <div class="footer-column">
+      <h3>IPM & BMS Program Links</h3>
+      <ul>
+        <li><a href="https://iimidr.ac.in/programmes/academic-programmes/five-year-integrated-programme-in-management-ipm/" target="_blank">IIM Indore</a></li>
+        <li><a href="https://iimrohtak.ac.in/ipm.php" target="_blank">IIM Rohtak</a></li>
+        <li><a href="https://iimranchi.ac.in/ipm/" target="_blank">IIM Ranchi</a></li>
+        <li><a href="https://www.iimj.ac.in/programs/ipm/IPM_at_a_glance.php" target="_blank">IIM Jammu</a></li>
+        <li><a href="https://iimbg.ac.in/programs/ipm/" target="_blank">IIM Bodh Gaya</a></li>
+        <li><a href="https://iimamritsar.ac.in/academics/ipm/about-program" target="_blank">IIM Amritsar</a></li>
+        <li><a href="https://www.iimshillong.ac.in/ipm/overview" target="_blank">IIM Shillong</a></li>
+        <li><a href="https://www.iimsirmaur.ac.in/bachelors-management-studies-bms#content-section" target="_blank">IIM Sirmaur</a></li>
+        <li><a href="https://doms.nalsar.ac.in/ipm/" target="_blank">NALSAR Hyderabad</a></li>
+        <li><a href="https://management.nirmauni.ac.in/admission-aid/undergraduate/bba-mba-five-year-integrated/" target="_blank">Nirma University</a></li>
+        <li><a href="https://www.iift.ac.in/iift/ipm.php" target="_blank">IIFT Kakinada</a></li>
+        <li><a href="https://www.tapmi.edu.in/programs/ipm/" target="_blank">TAPMI Manipal</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4: Contact Info -->
+    <div class="footer-column">
+      <h3>Contact Us</h3>
+      <p>250 Officer Colony, Civil Lines, Gurgaon, Haryana - 122003</p>
+      <p>📞 9318353877</p>
+      <p>✉️ info@nextiimprep.com</p>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="footer-bottom">
+    <p>© 2025 NextIIM Prep. All rights reserved.</p>
+    <div class="footer-policy-links">
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms & Conditions</a> |
+      <a href="#">Refund & Cancellation</a>
+    </div>
+  </div>
+</footer>
 
 <script>
     const infoPanel = document.getElementById('infoPanel');
