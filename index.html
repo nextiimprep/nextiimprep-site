@@ -739,11 +739,11 @@ header nav a {
   padding: 2px 12px;
   border-radius: 8px;
 }
-
-    <style>
+<style>
+/* ✅ FOOTER CSS START */
 .footer {
   background: #1D0D5A;
-  color: #fff;
+  color: #ffffff;
   padding: 60px 20px 30px;
   font-family: 'Inter', sans-serif;
 }
@@ -759,18 +759,22 @@ header nav a {
 
 .footer-column {
   flex: 1 1 220px;
+  min-width: 220px;
 }
 
 .footer-column h3 {
   font-size: 18px;
+  font-weight: 600;
   margin-bottom: 16px;
   border-bottom: 2px solid #EB5525;
   padding-bottom: 6px;
+  color: #fff;
 }
 
 .footer-column ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .footer-column ul li {
@@ -778,7 +782,7 @@ header nav a {
 }
 
 .footer-column ul li a {
-  color: #eee;
+  color: #f0f0f0;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s;
@@ -796,10 +800,12 @@ header nav a {
 .footer-desc {
   font-size: 14px;
   color: #ccc;
+  line-height: 1.6;
+  margin-top: 10px;
 }
 
 .footer-bottom {
-  border-top: 1px solid #555;
+  border-top: 1px solid #444;
   margin-top: 40px;
   padding-top: 15px;
   display: flex;
@@ -807,36 +813,39 @@ header nav a {
   align-items: center;
   flex-wrap: wrap;
   font-size: 14px;
-  color: #aaa;
+  color: #bbb;
 }
 
 .footer-policy-links a {
-  color: #aaa;
-  margin-left: 10px;
+  color: #bbb;
+  margin-left: 12px;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-policy-links a:hover {
   color: #EB5525;
 }
 
+/* ✅ Responsive Design */
 @media screen and (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     gap: 30px;
+    text-align: center;
   }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
     gap: 10px;
   }
+
   .footer-policy-links a {
-    display: inline-block;
-    margin: 5px;
+    margin: 0 8px;
   }
 }
 </style>
-<!-- ✅ FOOTER CSS END -->
 
 
 </style>
