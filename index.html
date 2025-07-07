@@ -843,6 +843,38 @@ header nav a {
     text-align: left;
   }
 }
+.footer-sub-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.footer-sub-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-sub-columns ul li {
+  margin-bottom: 10px;
+}
+
+.footer-sub-columns ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-sub-columns ul li a:hover {
+  color: #EB5525;
+}
+
+@media (max-width: 768px) {
+  .footer-sub-columns {
+    flex-direction: column;
+  }
+}
 
 </style>
 
@@ -1120,6 +1152,7 @@ header nav a {
 
     <div class="footer-column">
       <h3>IPM & BMS Program Links</h3>
+      <div class="footer-sub-columns">
       <ul>
         <li><a href="https://iimidr.ac.in/programmes/academic-programmes/five-year-integrated-programme-in-management-ipm/"target="_blank" rel="noopener noreferrer"
 >IIM Indore</a></li>
@@ -1128,6 +1161,8 @@ header nav a {
         <li><a href="https://www.iimj.ac.in/programs/ipm/IPM_at_a_glance.php"target="_blank" rel="noopener noreferrer">IIM Jammu</a></li>
         <li><a href="https://iimbg.ac.in/programs/ipm/"target="_blank" rel="noopener noreferrer">IIM Bodh Gaya</a></li>
         <li><a href="https://iimamritsar.ac.in/academics/ipm/about-program"target="_blank" rel="noopener noreferrer">IIM Amritsar</a></li>
+         </ul>
+         <ul>
         <li><a href="https://www.iimshillong.ac.in/ipm/overview"target="_blank" rel="noopener noreferrer">IIM Shillong</a></li>
         <li><a href="https://www.iimsirmaur.ac.in/bachelors-management-studies-bms#content-section">IIM Sirmaur</a></li>
         <li><a href="https://doms.nalsar.ac.in/ipm/"target="_blank" rel="noopener noreferrer">NALSAR Hyderabad</a></li>
@@ -1136,7 +1171,7 @@ header nav a {
         <li><a href="https://www.tapmi.edu.in/programs/ipm/"target="_blank" rel="noopener noreferrer">TAPMI Manipal</a></li>
       </ul>
     </div>
-
+</div>
     <div class="footer-column">
       <h3>Contact Us</h3>
       <p style="font-size:14px; line-height:1.6;">
