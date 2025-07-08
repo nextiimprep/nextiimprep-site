@@ -744,36 +744,37 @@ header nav a {
   color: #ffffff;
   padding: 60px 20px 30px;
   font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
 }
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
   gap: 40px;
-  width: 100%;
-  padding-left: 40px;  /* Manual left spacing */
-  padding-right: 20px;
   box-sizing: border-box;
 }
 
 .footer-column {
   flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-column.logo-column {
   align-items: flex-start;
-  display: flex;
-  flex-direction: column;
   text-align: left;
-  margin-left: 0 !important;
-  padding-left: 0 !important;
 }
 
 .footer-logo {
   width: 200px;
   margin-bottom: 10px;
 }
+
 .footer-desc h2 {
   font-size: 17px;
   margin: 0;
@@ -815,6 +816,34 @@ header nav a {
   color: #EB5525;
 }
 
+.footer-sub-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+}
+
+.footer-sub-columns ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-sub-columns ul li {
+  margin-bottom: 10px;
+}
+
+.footer-sub-columns ul li a {
+  color: #eeeeee;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-sub-columns ul li a:hover {
+  color: #EB5525;
+}
+
 .footer-bottom {
   border-top: 1px solid #555;
   margin-top: 40px;
@@ -843,42 +872,17 @@ header nav a {
 
   .footer-column {
     width: 100%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-sub-columns {
+    flex-direction: column;
+    gap: 20px;
   }
 
   .footer-bottom {
     text-align: left;
-  }
-}
-.footer-sub-columns {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-}
-
-.footer-sub-columns ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-sub-columns ul li {
-  margin-bottom: 10px;
-}
-
-.footer-sub-columns ul li a {
-  color: #eeeeee;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.footer-sub-columns ul li a:hover {
-  color: #EB5525;
-}
-
-@media (max-width: 768px) {
-  .footer-sub-columns {
-    flex-direction: column;
   }
 }
 
