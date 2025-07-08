@@ -744,7 +744,6 @@ header nav a {
   color: #ffffff;
   padding: 60px 20px 30px;
   font-family: 'Inter', sans-serif;
-  box-sizing: border-box;
 }
 
 .footer-container {
@@ -752,20 +751,18 @@ header nav a {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   gap: 40px;
-  box-sizing: border-box;
 }
 
 .footer-column {
   flex: 1 1 220px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  min-width: 220px;
 }
 
 .footer-column.logo-column {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
   text-align: left;
 }
@@ -776,13 +773,13 @@ header nav a {
 }
 
 .footer-desc h2 {
-  font-size: 17px;
+  font-size: 18px;
   margin: 0;
   color: #ffffff;
 }
 
 .footer-desc p {
-  font-size: 10px;
+  font-size: 12px;
   margin: 4px 0 0;
   color: #cccccc;
 }
@@ -816,11 +813,11 @@ header nav a {
   color: #EB5525;
 }
 
+/* Two-column layout for IPM links */
 .footer-sub-columns {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .footer-sub-columns ul {
@@ -831,17 +828,6 @@ header nav a {
 
 .footer-sub-columns ul li {
   margin-bottom: 10px;
-}
-
-.footer-sub-columns ul li a {
-  color: #eeeeee;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
-}
-
-.footer-sub-columns ul li a:hover {
-  color: #EB5525;
 }
 
 .footer-bottom {
@@ -863,28 +849,22 @@ header nav a {
   color: #EB5525;
 }
 
+/* Mobile */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 10px;
-  }
-
-  .footer-column {
-    width: 100%;
-    align-items: flex-start;
-    text-align: left;
   }
 
   .footer-sub-columns {
     flex-direction: column;
-    gap: 20px;
   }
 
   .footer-bottom {
     text-align: left;
   }
 }
+
 
 </style>
 
@@ -1144,10 +1124,10 @@ header nav a {
    <div class="footer-column logo-column">
   <img src="path-to-logo2.png" alt="NextIIM Logo" class="footer-logo">
   <div class="footer-desc">
-  <h2 style="margin: 0; font-size: 20px; color: #ffffff;">Next Begins Here</h2>
-  <p style="margin: 4px 0 0; font-size: 13px; color: #cccccc;"><em>Where IIM Dreams Take Their First Step</em></p>
-</div>
-
+  <h2>Next Begins Here</h2>
+  <p><em>Where IIM Dreams Take Their First Step</em></p>
+      </div>
+    </div>
 
     <div class="footer-column">
       <h3>Quick Links</h3>
@@ -1182,26 +1162,29 @@ header nav a {
       </ul>
     </div>
 </div>
+    
     <div class="footer-column">
       <h3>Contact Us</h3>
-      <p style="font-size:14px; line-height:1.6;">
-        250 Officer Colony, Civil Lines,<br>Gurgaon, Haryana – 122003<br><br>
-        <span>📞 <a href="tel:9318353877" style="color: #fff;">9318353877</a></span><br>
-        <span>✉️ <a href="mailto:info@nextiimprep.com" style="color: #fff;">info@nextiimprep.com</a></span>
-      </p>
+      <p>250 Officer Colony, Civil Lines,<br>Gurgaon, Haryana – 122003</p>
+      <p>📞 <a href="tel:9318353877">9318353877</a></p>
+      <p>✉️ <a href="mailto:info@nextiimprep.com">info@nextiimprep.com</a></p>
     </div>
   </div>
 
+
+ 
+  <!-- Bottom Bar -->
   <div class="footer-bottom">
-    <div>© 2025 NextIIM Prep. All rights reserved.</div>
     <div class="footer-policy-links">
       <a href="#">Privacy Policy</a> |
       <a href="#">Terms & Conditions</a> |
       <a href="#">Refund & Cancellation</a>
     </div>
+    <p>© 2025 NextIIM Prep. All rights reserved.</p>
   </div>
 </footer>
 <!-- ✅ NEXTIIM FOOTER END -->
+
 
 <script>
     const infoPanel = document.getElementById('infoPanel');
