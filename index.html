@@ -750,21 +750,23 @@ header nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
-  gap: 40px;
+  box-sizing: border-box;
 }
 
 .footer-column {
   flex: 1 1 220px;
-  min-width: 220px;
 }
 
 .footer-column.logo-column {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   text-align: left;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .footer-logo {
@@ -773,13 +775,13 @@ header nav a {
 }
 
 .footer-desc h2 {
-  font-size: 18px;
+  font-size: 17px;
   margin: 0;
   color: #ffffff;
 }
 
 .footer-desc p {
-  font-size: 12px;
+  font-size: 10px;
   margin: 4px 0 0;
   color: #cccccc;
 }
@@ -800,6 +802,7 @@ header nav a {
 
 .footer-column ul li {
   margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .footer-column ul li a {
@@ -813,21 +816,24 @@ header nav a {
   color: #EB5525;
 }
 
-/* Two-column layout for IPM links */
 .footer-sub-columns {
   display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
+  flex-direction: row;
+  gap: 40px;
 }
 
-.footer-sub-columns ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.footer-column.contact-info ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: #eeeeee;
+  line-height: 1.6;
 }
 
-.footer-sub-columns ul li {
-  margin-bottom: 10px;
+.footer-column.contact-info ul li a {
+  color: #eeeeee;
+  word-break: break-word;
 }
 
 .footer-bottom {
@@ -849,11 +855,15 @@ header nav a {
   color: #EB5525;
 }
 
-/* Mobile */
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
+    padding: 0 10px;
+  }
+
+  .footer-column {
+    width: 100%;
   }
 
   .footer-sub-columns {
@@ -864,6 +874,7 @@ header nav a {
     text-align: left;
   }
 }
+
 
 
 </style>
@@ -1163,14 +1174,15 @@ header nav a {
     </div>
 </div>
     
-    <div class="footer-column">
+   <div class="footer-column contact-info">
       <h3>Contact Us</h3>
-      <p>250 Officer Colony, Civil Lines,<br>Gurgaon, Haryana – 122003</p>
-      <p>📞 <a href="tel:9318353877">9318353877</a></p>
-      <p>✉️ <a href="mailto:info@nextiimprep.com">info@nextiimprep.com</a></p>
+      <ul>
+        <li><span class="icon">📍</span>250 Officer Colony, Civil Lines,<br />Gurgaon, Haryana – 122003</li>
+        <li><span class="icon">📞</span><a href="tel:9318353877">9318353877</a></li>
+        <li><span class="icon">✉️</span><a href="mailto:info@nextiimprep.com">info@nextiimprep.com</a></li>
+      </ul>
     </div>
   </div>
-
 
  
   <!-- Bottom Bar -->
