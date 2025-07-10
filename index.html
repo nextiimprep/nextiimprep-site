@@ -225,36 +225,46 @@ header nav a {
       flex-wrap: wrap;
       gap: 20px;
     }
-    .dropdown {
+   /* Mega Dropdown */
+.dropdown {
   position: relative;
 }
 
-.dropdown .mega-panel {
+.mega-dropdown {
+  display: none;
   position: absolute;
-  top: 40px;
+  top: 100%;
   left: 0;
-  background: #ffffff;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  padding: 30px 60px;
-  border-radius: 10px;
-  white-space: nowrap;
-  min-width: 300px;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  padding: 40px;
   z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
 }
 
-.dropdown:hover .mega-panel {
-  opacity: 1;
-  visibility: visible;
+.dropdown:hover .mega-dropdown {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
-.mega-panel p {
-  font-size: 18px;
+.dropdown-content {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.dropdown-content h2 {
+  font-size: 28px;
+  color: #1D0D5A;
   font-weight: 600;
-  color: #1d0d5a;
 }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
  .card {
   min-height: 70px;
@@ -951,9 +961,11 @@ header nav a {
   <li><a href="index.html">Home</a></li>
   <li><a href="index.html#about">About</a></li>
  <li class="dropdown">
-  <a href="javascript:void(0)">Courses</a>
-  <div class="mega-panel">
-    <p>🚧 Coming Soon</p>
+  <a href="#">Courses</a>
+  <div class="mega-dropdown">
+    <div class="dropdown-content">
+      <h2>🚧 Coming Soon</h2>
+    </div>
   </div>
 </li>
   <li><a href="blogs.html">Blogs</a></li> <!-- Only this one goes to a new page -->
