@@ -460,5 +460,16 @@ header nav a {
   </div>
 </footer>
 <!-- ✅ NEXTIIM FOOTER END -->
+  <script>
+  window.addEventListener('scroll', function () {
+    const header = document.querySelector('header');
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+  <div style="height: 1500px;"></div>
 </body>
 </html>
