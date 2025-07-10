@@ -6,12 +6,56 @@
   <title>Blogs | NextIIM Prep</title>
   <link rel="stylesheet" href="style.css" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 0;
       background-color: #f9f9f9;
       color: #1d0d5a;
+    }
+
+    header {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 24px;
+      color: #1D0D5A;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .navbar-links {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar-links li {
+      list-style: none;
+    }
+
+    .navbar-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1D0D5A;
+    }
+
+    .navbar-links a:hover {
+      color: #EB5525;
     }
 
     .blogs-section {
@@ -75,47 +119,161 @@
     .read-more:hover {
       text-decoration: underline;
     }
+
+    footer.footer {
+      background: #1D0D5A;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .footer-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .footer-column {
+      flex: 1 1 300px;
+    }
+
+    .footer-column h3 {
+      margin-bottom: 10px;
+    }
+
+    .footer-sub-columns {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-sub-columns ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .footer-sub-columns ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-sub-columns ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .footer-sub-columns ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .contact-info ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .contact-info li {
+      margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      padding-top: 20px;
+      margin-top: 30px;
+    }
+
+    .footer-policy-links a {
+      color: #EB5525;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .footer-policy-links a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="NextIIM Logo" style="height: 32px;" />
+      NextIIM
+    </div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#courses">Courses</a></li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="index.html#community">Communities</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </header>
 
-  <!-- Header/Navbar Include -->
-  <!-- You can insert your header or use include if templated -->
-
-  <!-- Blog Section -->
   <section class="blogs-section">
     <h1 class="section-title">📚 Blogs & Insights</h1>
     <p class="section-subtitle">Your weekly dose of strategies, tips & student journeys</p>
 
     <div class="blogs-grid">
-      <!-- Blog Post #1 -->
       <div class="blog-card">
         <h2 class="blog-title">How to Start IPMAT Preparation from Class 11</h2>
         <p class="blog-snippet">If you're in Class 11 and aiming for IIM Indore or Rohtak, this is the perfect roadmap for a strong foundation...</p>
         <a href="#" class="read-more">Read More →</a>
       </div>
 
-      <!-- Blog Post #2 -->
       <div class="blog-card">
         <h2 class="blog-title">Top 5 Mistakes IPM Aspirants Make (And How to Avoid Them)</h2>
         <p class="blog-snippet">From ignoring mock tests to over-relying on school maths — here are the traps you should dodge...</p>
         <a href="#" class="read-more">Read More →</a>
       </div>
 
-      <!-- Blog Post #3 -->
       <div class="blog-card">
         <h2 class="blog-title">IPMAT vs JIPMAT: Which One Should You Target?</h2>
         <p class="blog-snippet">Confused between IIM Indore, Rohtak, and JIPMAT colleges? Here's a complete comparison of eligibility, difficulty and ROI...</p>
         <a href="#" class="read-more">Read More →</a>
       </div>
-
-      <!-- Add more blog-card divs here -->
     </div>
   </section>
 
-  <!-- Footer Include -->
   <footer class="footer">
-    <!-- Paste your styled footer code here -->
+    <div class="footer-columns">
+      <div class="footer-column">
+        <h3>IPM & BMS Program Links</h3>
+        <div class="footer-sub-columns">
+          <ul>
+            <li><a href="https://iimidr.ac.in/programmes/academic-programmes/five-year-integrated-programme-in-management-ipm/" target="_blank">IIM Indore</a></li>
+            <li><a href="https://iimrohtak.ac.in/ipm.php" target="_blank">IIM Rohtak</a></li>
+            <li><a href="https://iimranchi.ac.in/ipm/" target="_blank">IIM Ranchi</a></li>
+            <li><a href="https://www.iimj.ac.in/programs/ipm/IPM_at_a_glance.php" target="_blank">IIM Jammu</a></li>
+            <li><a href="https://iimbg.ac.in/programs/ipm/" target="_blank">IIM Bodh Gaya</a></li>
+            <li><a href="https://iimamritsar.ac.in/academics/ipm/about-program" target="_blank">IIM Amritsar</a></li>
+          </ul>
+          <ul>
+            <li><a href="https://www.iimshillong.ac.in/ipm/overview" target="_blank">IIM Shillong</a></li>
+            <li><a href="https://www.iimsirmaur.ac.in/bachelors-management-studies-bms#content-section" target="_blank">IIM Sirmaur</a></li>
+            <li><a href="https://doms.nalsar.ac.in/ipm/" target="_blank">NALSAR Hyderabad</a></li>
+            <li><a href="https://management.nirmauni.ac.in/admission-aid/undergraduate/bba-mba-five-year-integrated/" target="_blank">Nirma University</a></li>
+            <li><a href="https://www.iift.ac.in/iift/ipm.php" target="_blank">IIFT Kakinada</a></li>
+            <li><a href="https://www.tapmi.edu.in/programs/ipm/" target="_blank">TAPMI Manipal</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-column contact-info">
+        <h3>Contact Us</h3>
+        <ul class="contact-list">
+          <li>📍 250 Officer Colony, Civil Lines,<br />Gurgaon, Haryana – 122003</li>
+          <li>📞 9318353877</li>
+          <li>✉️ info@nextiimprep.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-policy-links">
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms & Conditions</a> |
+        <a href="#">Refund & Cancellation</a>
+      </div>
+      <p>© 2025 NextIIM Prep. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
