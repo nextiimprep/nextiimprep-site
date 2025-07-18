@@ -226,20 +226,17 @@ header nav a {
       gap: 20px;
     }
    /* Mega Dropdown */
-.dropdown {
-  position: relative;
-}
 
 .mega-dropdown {
   display: none;
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 100%;
+  top: 90px; /* or whatever your header height is */
   width: 100vw;
   background: #fff;
   box-shadow: 0 8px 32px rgba(0,0,0,0.09);
   padding: 48px 0 40px 0;
-  z-index: 999;
+  z-index: 2000;
   border-bottom: 1px solid #f0f0f0;
   border-radius: 0 0 28px 28px;
   animation: fadeIn 0.25s ease-in;
