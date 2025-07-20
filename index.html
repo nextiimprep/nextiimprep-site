@@ -947,36 +947,140 @@ header nav a {
   scroll-margin-top: 100px;
 }
 
+    /* --- Hamburger Icon Styles --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 36px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 3001;
+  margin-left: 14px;
+  margin-right: 4px;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #EB5525;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -6px);
+}
+
+/* --- Responsive Nav --- */
+@media (max-width: 900px) {
+  header {
+    padding: 8px 12px;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .navbar-links {
+    position: fixed;
+    top: 80px; /* below header */
+    right: -110vw; /* hide out of view */
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 22px rgba(0,0,0,0.08);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    z-index: 2002;
+    padding: 30px 24px;
+    transition: right 0.3s;
+    border-radius: 12px 0 0 12px;
+    border-left: 2px solid #EB5525;
+  }
+  .navbar-links.open {
+    right: 0;
+  }
+  .navbar-links li {
+    margin: 0 0 18px 0;
+    width: 100%;
+  }
+  .navbar-links li a {
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+
+  /* Dropdown menu in mobile */
+  .mega-dropdown {
+    position: static !important;
+    width: 100%;
+    padding: 8px 0 10px 0;
+    border-radius: 10px;
+    box-shadow: none;
+    border-bottom: none;
+    background: #f8f9fa;
+    z-index: 1;
+  }
+  .dropdown .mega-dropdown {
+    display: none;
+  }
+  .dropdown.open .mega-dropdown {
+    display: block;
+  }
+  .dropdown-content {
+    padding: 0 6px;
+    gap: 12px;
+    flex-direction: column;
+  }
+}
+
 </style>
 
 </style>
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="NextIIM LOGO.png" alt="NextIIM Logo" />
-      </a>
-    </div>
-    <nav>
-<ul class="navbar-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="index.html#about">About</a></li>
- <li class="dropdown">
-  <a href="#">Courses</a>
-  <div class="mega-dropdown">
-    <div class="dropdown-content">
-      <h2>Coming Soon</h2>
-    </div>
+ <header>
+  <div class="logo">
+    <a href="index.html">
+      <img src="NextIIM LOGO.png" alt="NextIIM Logo" />
+    </a>
   </div>
-</li>
-  <li><a href="blogs.html">Blogs</a></li> <!-- Only this one goes to a new page -->
-  <li><a href="#community">Communities</a></li>
-
-</ul>
-    </nav>
-  </header>
+  <nav>
+    <ul class="navbar-links" id="navbarLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li class="dropdown" id="coursesDropdown">
+        <a href="#">Courses <span class="arrow">&#9662;</span></a>
+        <div class="mega-dropdown" id="megaDropdown">
+          <div class="dropdown-content">
+            <h2>Coming Soon</h2>
+          </div>
+        </div>
+      </li>
+      <li><a href="blogs.html">Blogs</a></li>
+      <li><a href="#community">Communities</a></li>
+    </ul>
+    <!-- Hamburger icon for mobile nav toggle -->
+    <div class="hamburger" id="hamburger" aria-label="Toggle Menu" tabindex="0">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
 
   <div class="hero">
     <div class="carousel">
@@ -1486,5 +1590,49 @@ header nav a {
     }
   });
 </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById('hamburger');
+  const navbarLinks = document.getElementById('navbarLinks');
+  const coursesDropdown = document.getElementById('coursesDropdown');
+
+  // Hamburger menu toggle
+  hamburger.addEventListener('click', function () {
+    hamburger.classList.toggle('active');
+    navbarLinks.classList.toggle('open');
+    // Close any open dropdown in mobile nav
+    coursesDropdown.classList.remove('open');
+  });
+
+  // Close mobile nav on link click (optional, improves UX)
+  document.querySelectorAll('.navbar-links a').forEach(link => {
+    link.addEventListener('click', function() {
+      if(window.innerWidth < 900){
+        hamburger.classList.remove('active');
+        navbarLinks.classList.remove('open');
+        coursesDropdown.classList.remove('open');
+      }
+    });
+  });
+
+  // Courses dropdown (for mobile: tap to expand)
+  coursesDropdown.addEventListener('click', function(e){
+    if(window.innerWidth < 900){
+      e.preventDefault();
+      coursesDropdown.classList.toggle('open');
+    }
+  });
+
+  // Prevent desktop hover dropdown from interfering on mobile
+  window.addEventListener('resize', function(){
+    if(window.innerWidth >= 900){
+      navbarLinks.classList.remove('open');
+      hamburger.classList.remove('active');
+      coursesDropdown.classList.remove('open');
+    }
+  });
+});
+</script>
+
 </body>
 </html>
