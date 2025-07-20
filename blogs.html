@@ -11,13 +11,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
- font-family: 'Poppins', 'Segoe UI', 'Open Sans', sans-serif;
+  font-family: 'Poppins', 'Segoe UI', 'Open Sans', sans-serif;
 }
-    html {
-      height: 100%;
-      overflow-x: hidden;
-    }
-   body {
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+body {
   background: #f8f9fa;
   color: #1D0D5A;
   line-height: 1.6;
@@ -41,186 +41,274 @@ header {
   border-bottom: 1px solid rgba(0,0,0,0.05);
   box-shadow: 0 2px 6px rgba(0,0,0,0.04);
 }
-
 header.scrolled {
   background: #ffffff;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   padding: 6px 18px !important;
 }
-
 header.scrolled .logo img {
   height: 50px !important;
 }
-
 header.scrolled nav a {
   font-size: 14px !important;
 }
-
 header,
 header .logo img,
 header nav a {
   transition: all 0.3s ease;
 }
-
-    .logo img {
-      height: 70px;
-      width: auto;
-      transition: transform 0.3s ease;
-    }
-    .logo img:hover {
-      transform: scale(1.08);
-    }
-    .logo a {
-      display: inline-block;
-    }
- nav {
+.logo img {
+  height: 70px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.08);
+}
+.logo a {
+  display: inline-block;
+}
+nav {
   display: flex;
   flex: 1;
   justify-content: center;
   gap: 20px;
 }
-    nav a {
-      margin: 10px;
-      color: #1D0D5A;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #EB5525;
-    }
-    .navbar-links {
+nav a {
+  margin: 10px;
+  color: #1D0D5A;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #EB5525;
+}
+.navbar-links {
   list-style: none;
   display: flex;
   gap: 30px;
   margin: 0;
   padding: 0;
 }
-
 .navbar-links li {
   list-style: none;
+  position: relative;
 }
-    .logo-scroll-section {
-  width: 100%;
-  background-color: #ffffff;
-  padding: 30px 0;
-  overflow: hidden;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+.dropdown .arrow {
+  font-size: 13px;
+  margin-left: 3px;
 }
 
-.logo-scroll {
+/* Mega Dropdown */
+.mega-dropdown {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 90px; /* or whatever your header height is */
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.09);
+  padding: 48px 0 40px 0;
+  z-index: 2000;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 0 0 28px 28px;
+  animation: fadeIn 0.25s ease-in;
+}
+.dropdown:hover .mega-dropdown {
+  display: block;
+}
+.dropdown-content {
+  max-width: 1100px;
+  margin: 0 auto;
   display: flex;
-  align-items: center;
   gap: 60px;
-  width: max-content;
-  animation: scrollLoop 40s linear infinite;
+  justify-content: flex-start;
+  padding: 0 60px;
+  text-align: left;
 }
-
-.logo-scroll img {
-  height: 100px;
-  width: 100px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.logo-scroll img:hover {
-  transform: scale(1.08);
-}
-
-@keyframes scrollLoop {
-  0% {
-    transform: translateX(0%);
+@media (max-width: 900px) {
+  .dropdown-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
   }
-  100% {
-    transform: translateX(-50%);
+  .mega-dropdown {
+    padding: 30px 0 25px 0;
   }
 }
-    .blogs-section {
-      padding: 80px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 36px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  z-index: 3001;
+  margin-left: 14px;
+  margin-right: 4px;
+}
+.hamburger span {
+  display: block;
+  height: 4px;
+  width: 28px;
+  background: #EB5525;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(4px, 6px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -6px);
+}
+/* Responsive Nav */
+@media (max-width: 900px) {
+  header {
+    padding: 8px 12px;
+  }
+  nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .navbar-links {
+    position: fixed;
+    top: 80px; /* below header */
+    right: -110vw; /* hide out of view */
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 22px rgba(0,0,0,0.08);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    z-index: 2002;
+    padding: 30px 24px;
+    transition: right 0.3s;
+    border-radius: 12px 0 0 12px;
+    border-left: 2px solid #EB5525;
+  }
+  .navbar-links.open {
+    right: 0;
+  }
+  .navbar-links li {
+    margin: 0 0 18px 0;
+    width: 100%;
+  }
+  .navbar-links li a {
+    font-size: 18px;
+    display: block;
+    padding: 10px 0;
+  }
+  .hamburger {
+    display: flex;
+  }
+  /* Dropdown menu in mobile */
+  .mega-dropdown {
+    position: static !important;
+    width: 100%;
+    padding: 8px 0 10px 0;
+    border-radius: 10px;
+    box-shadow: none;
+    border-bottom: none;
+    background: #f8f9fa;
+    z-index: 1;
+  }
+  .dropdown .mega-dropdown {
+    display: none;
+  }
+  .dropdown.open .mega-dropdown {
+    display: block;
+  }
+  .dropdown-content {
+    padding: 0 6px;
+    gap: 12px;
+    flex-direction: column;
+  }
+}
 
-    .section-title {
-      font-size: 36px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 10px;
-    }
+/* --- Blogs page styles below --- */
+.blogs-section {
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.section-subtitle {
+  font-size: 18px;
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+.blogs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.blog-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+.blog-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #1d0d5a;
+}
+.blog-snippet {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 12px;
+}
+.read-more {
+  color: #eb5525;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
 
-    .section-subtitle {
-      font-size: 18px;
-      text-align: center;
-      color: #555;
-      margin-bottom: 40px;
-    }
-
-    .blogs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-
-    .blog-card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: 0.3s ease;
-    }
-
-    .blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    .blog-title {
-      font-size: 20px;
-      margin-bottom: 10px;
-      color: #1d0d5a;
-    }
-
-    .blog-snippet {
-      font-size: 15px;
-      color: #555;
-      margin-bottom: 12px;
-    }
-
-    .read-more {
-      color: #eb5525;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    .read-more:hover {
-      text-decoration: underline;
-    }
-
-   .footer {
+/* --- Footer styles unchanged (keep as is) --- */
+.footer {
   background-color: #00225a;
   color: #ffffff;
   padding: 60px 20px 30px;
   font-family: 'Inter', sans-serif;
 }
-
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1300px; /* Increased from 1200px for better spacing */
-  margin: 0 auto; /* Centering */
-  padding: 0 50px; /* Balanced left-right margin */
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 50px;
   box-sizing: border-box;
 }
-
 .footer-column {
   flex: 1 1 220px;
 }
-
 .footer-column.logo-column {
   align-items: flex-start;
   display: flex;
@@ -230,24 +318,20 @@ header nav a {
   padding-left: 0;
   flex: 1 1 280px;
 }
-
 .footer-logo {
   width: 200px;
   margin-bottom: 10px;
 }
-
 .footer-desc h2 {
   font-size: 18px;
   margin: 0;
   color: #ffffff;
 }
-
 .footer-desc p {
   font-size: 13px;
   margin: 4px 0 0;
   color: #cccccc;
 }
-
 .footer-column h3 {
   font-size: 20px;
   margin-bottom: 16px;
@@ -255,35 +339,29 @@ header nav a {
   padding-bottom: 6px;
   color: #ffffff;
 }
-
 .footer-column ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .footer-column ul li {
   margin-bottom: 10px;
   line-height: 1.6;
 }
-
 .footer-column ul li a {
   color: #eeeeee;
   text-decoration: none;
   font-size: 16px;
   transition: 0.3s;
 }
-
 .footer-column ul li a:hover {
   color: #EB5525;
 }
-
 .footer-sub-columns {
   display: flex;
   flex-direction: row;
   gap: 40px;
 }
-
 .footer-column.contact-info ul li {
   display: flex;
   align-items: flex-start;
@@ -292,12 +370,10 @@ header nav a {
   color: #eeeeee;
   line-height: 1.6;
 }
-
 .footer-column.contact-info ul li a {
   color: #eeeeee;
   word-break: break-word;
 }
-
 .footer-bottom {
   border-top: 1px solid #555;
   margin-top: 40px;
@@ -306,49 +382,41 @@ header nav a {
   color: #aaa;
   font-size: 13px;
 }
-
 .footer-policy-links a {
   color: #aaa;
   margin: 0 8px;
   text-decoration: none;
 }
-
 .footer-policy-links a:hover {
   color: #EB5525;
 }
-
 @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
     padding: 0 10px;
   }
-
   .footer-column {
     width: 100%;
   }
-
   .footer-sub-columns {
     flex-direction: column;
   }
-
   .footer-bottom {
     text-align: left;
   }
   .contact-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .contact-list li {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #eeeeee;
+  }
 }
-
-.contact-list li {
-  margin-bottom: 12px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #eeeeee;
-}
-}
-
   </style>
 </head>
 <body>
@@ -359,33 +427,43 @@ header nav a {
       </a>
     </div>
     <nav>
-<ul class="navbar-links">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="index.html#about">About</a></li>
-  <li><a href="index.html#courses">Courses</a></li>
-  <li><a href="blogs.html">Blogs</a></li> <!-- Only this one goes to a new page -->
-  <li><a href="#community">Communities</a></li>
-
-</ul>
+      <ul class="navbar-links" id="navbarLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li class="dropdown" id="coursesDropdown">
+          <a href="#">Courses <span class="arrow">&#9662;</span></a>
+          <div class="mega-dropdown" id="megaDropdown">
+            <div class="dropdown-content">
+              <h2>Coming Soon</h2>
+            </div>
+          </div>
+        </li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="#community">Communities</a></li>
+      </ul>
+      <!-- Hamburger icon for mobile nav toggle -->
+      <div class="hamburger" id="hamburger" aria-label="Toggle Menu" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
+
   <section class="blogs-section">
     <h1 class="section-title">📚 Blogs & Insights</h1>
     <p class="section-subtitle">Your weekly dose of strategies, tips & student journeys</p>
-
     <div class="blogs-grid">
       <div class="blog-card">
         <h2 class="blog-title">How to Start IPMAT Preparation from Class 11</h2>
         <p class="blog-snippet">If you're in Class 11 and aiming for IIM Indore or Rohtak, this is the perfect roadmap for a strong foundation...</p>
         <a href="#" class="read-more">Read More →</a>
       </div>
-
       <div class="blog-card">
         <h2 class="blog-title">Top 5 Mistakes IPM Aspirants Make (And How to Avoid Them)</h2>
         <p class="blog-snippet">From ignoring mock tests to over-relying on school maths — here are the traps you should dodge...</p>
         <a href="#" class="read-more">Read More →</a>
       </div>
-
       <div class="blog-card">
         <h2 class="blog-title">IPMAT vs JIPMAT: Which One Should You Target?</h2>
         <p class="blog-snippet">Confused between IIM Indore, Rohtak, and JIPMAT colleges? Here's a complete comparison of eligibility, difficulty and ROI...</p>
@@ -403,7 +481,6 @@ header nav a {
   <p><em>Where IIM Dreams Take Their First Step</em></p>
       </div>
     </div>
-
     <div class="footer-column">
       <h3>Quick Links</h3>
       <ul>
@@ -414,7 +491,6 @@ header nav a {
        <li><a href="blogs.html">Blogs</a></li>
       </ul>
     </div>
-
     <div class="footer-column">
       <h3>IPM & BMS Program Links</h3>
       <div class="footer-sub-columns">
@@ -437,7 +513,6 @@ header nav a {
       </ul>
     </div>
 </div>
-    
    <div class="footer-column contact-info">
       <h3>Contact Us</h3>
       <ul class="contact-list">
@@ -447,9 +522,6 @@ header nav a {
 </ul>
     </div>
   </div>
-
-
-  <!-- Bottom Bar -->
   <div class="footer-bottom">
     <div class="footer-policy-links">
       <a href="#">Privacy Policy</a> |
@@ -459,16 +531,59 @@ header nav a {
     <p>© 2025 NextIIM Prep. All rights reserved.</p>
   </div>
 </footer>
-<!-- ✅ NEXTIIM FOOTER END -->
   <script>
-  window.addEventListener('scroll', function () {
-    const header = document.querySelector('header');
-    if (window.scrollY > 20) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  });
-</script>
+    // Hamburger + Mobile Dropdown Script
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById('hamburger');
+      const navbarLinks = document.getElementById('navbarLinks');
+      const coursesDropdown = document.getElementById('coursesDropdown');
+
+      // Hamburger menu toggle
+      hamburger.addEventListener('click', function () {
+        hamburger.classList.toggle('active');
+        navbarLinks.classList.toggle('open');
+        // Close any open dropdown in mobile nav
+        coursesDropdown.classList.remove('open');
+      });
+
+      // Close mobile nav on link click (optional, improves UX)
+      document.querySelectorAll('.navbar-links a').forEach(link => {
+        link.addEventListener('click', function() {
+          if(window.innerWidth < 900){
+            hamburger.classList.remove('active');
+            navbarLinks.classList.remove('open');
+            coursesDropdown.classList.remove('open');
+          }
+        });
+      });
+
+      // Courses dropdown (for mobile: tap to expand)
+      coursesDropdown.addEventListener('click', function(e){
+        if(window.innerWidth < 900){
+          e.preventDefault();
+          coursesDropdown.classList.toggle('open');
+        }
+      });
+
+      // Prevent desktop hover dropdown from interfering on mobile
+      window.addEventListener('resize', function(){
+        if(window.innerWidth >= 900){
+          navbarLinks.classList.remove('open');
+          hamburger.classList.remove('active');
+          coursesDropdown.classList.remove('open');
+        }
+      });
+    });
+
+    // Header shrink on scroll
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('header');
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
 </html>
