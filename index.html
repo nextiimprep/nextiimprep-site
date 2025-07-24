@@ -48,9 +48,9 @@
       </div>
     </div>
     <div class="dots">
-      <span class="dot active" onclick="jumpToSlide(0)"></span>
-      <span class="dot" onclick="jumpToSlide(1)"></span>
-      <span class="dot" onclick="jumpToSlide(2)"></span>
+      <span class="dot active"></span>
+<span class="dot"></span>
+<span class="dot"></span>
     </div>
     <div class="hero-text">
       <h2 class="typing">Next Begins Here</h2>
@@ -582,41 +582,44 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
     <script>
-let currentSlide = 0;
-let slideTimer;
-const images = document.querySelector('.carousel-images');
-const dots = document.querySelectorAll('.dot');
-const totalSlides = images.children.length;
-
-function showSlide(index) {
-  images.style.transition = 'transform 0.6s cubic-bezier(.75,0,.25,1)';
-  images.style.transform = `translateX(-${index * 100}vw)`;
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-  currentSlide = index;
-}
-
-// Manual navigation (dot click)
-function jumpToSlide(index) {
-  showSlide(index);
-  resetAutoSlide();
-}
-
-// Auto slide every 4s
-function autoSlide() {
-  currentSlide = (currentSlide + 1) % totalSlides;
-  showSlide(currentSlide);
-  slideTimer = setTimeout(autoSlide, 4000);
-}
-
-function resetAutoSlide() {
-  clearTimeout(slideTimer);
-  slideTimer = setTimeout(autoSlide, 4000);
-}
-
-// Initialize
 document.addEventListener('DOMContentLoaded', function () {
+  let currentSlide = 0;
+  let slideTimer;
+  const images = document.querySelector('.carousel-images');
+  const dots = document.querySelectorAll('.dot');
+  const totalSlides = images.children.length;
+
+  function showSlide(index) {
+    images.style.transition = 'transform 0.6s cubic-bezier(.75,0,.25,1)';
+    images.style.transform = `translateX(-${index * 100}vw)`;
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+    currentSlide = index;
+  }
+
+  function jumpToSlide(index) {
+    showSlide(index);
+    resetAutoSlide();
+  }
+
+  function autoSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+    slideTimer = setTimeout(autoSlide, 4000);
+  }
+
+  function resetAutoSlide() {
+    clearTimeout(slideTimer);
+    slideTimer = setTimeout(autoSlide, 4000);
+  }
+
+  // Attach the dot click listeners
+  dots.forEach((dot, i) => {
+    dot.onclick = function() { jumpToSlide(i); };
+  });
+
+  // Init first slide and timer
   showSlide(currentSlide);
   slideTimer = setTimeout(autoSlide, 4000);
 });
