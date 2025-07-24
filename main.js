@@ -200,7 +200,6 @@ function showInfo(exam) {
       infoPanel.classList.add('active');
     }
   // ... (poori showInfo function yahan)
-}
 
 function closeInfo() {
   infoPanel.classList.remove('active');
