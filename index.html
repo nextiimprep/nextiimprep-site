@@ -527,15 +527,6 @@
     function closeInfo() {
       infoPanel.classList.remove('active');
     }
-
-    function jumpToSlide(index) {
-      const images = document.querySelector('.carousel-images');
-      images.style.transition = 'transform 0.6s ease-in-out';
-      images.style.transform = `translateX(-${index * 100}vw)`;
-      document.querySelectorAll('.dot').forEach((dot, i) => {
-        dot.classList.toggle('active', i === index);
-      });
-    }
   </script>
  <script>
   window.addEventListener('scroll', function () {
@@ -588,6 +579,46 @@ document.addEventListener("DOMContentLoaded", function () {
       coursesDropdown.classList.remove('open');
     }
   });
+});
+</script>
+    <script>
+let currentSlide = 0;
+let slideTimer;
+const images = document.querySelector('.carousel-images');
+const dots = document.querySelectorAll('.dot');
+const totalSlides = images.children.length;
+
+function showSlide(index) {
+  images.style.transition = 'transform 0.6s cubic-bezier(.75,0,.25,1)';
+  images.style.transform = `translateX(-${index * 100}vw)`;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+  currentSlide = index;
+}
+
+// Manual navigation (dot click)
+function jumpToSlide(index) {
+  showSlide(index);
+  resetAutoSlide();
+}
+
+// Auto slide every 4s
+function autoSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+  slideTimer = setTimeout(autoSlide, 4000);
+}
+
+function resetAutoSlide() {
+  clearTimeout(slideTimer);
+  slideTimer = setTimeout(autoSlide, 4000);
+}
+
+// Initialize
+document.addEventListener('DOMContentLoaded', function () {
+  showSlide(currentSlide);
+  slideTimer = setTimeout(autoSlide, 4000);
 });
 </script>
 </body>
