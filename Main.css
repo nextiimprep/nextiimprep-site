@@ -552,8 +552,8 @@ header nav a {
   background: linear-gradient(120deg, #fff9f5 65%, #ffe5d1 100%);
   border-radius: 28px;
   box-shadow: 0 8px 40px 0 rgba(20,28,72,0.04);
-  padding: 44px 0 24px 0;
-  max-width: 1050px;
+  padding: 44px 0 24px 0;           /* Upar niche padding thik hai, left/right 0 rehne do */
+  max-width: 1400px;                /* Pehle 1050px tha, ab 1400px kar do */
   margin: 40px auto 0 auto;
   position: relative;
 }
