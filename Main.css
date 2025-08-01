@@ -653,6 +653,12 @@ header nav a {
   .timeline-section { padding: 14px 0 7px 0;}
   .timeline-card { padding: 15px 8px; min-width: 120px; }
 }
+@media (max-width: 900px) {
+  .timeline-section {
+    max-width: 99vw;
+    padding: 24px 0 10px 0;
+  }
+}
 
 .content {
   background-color: white;
