@@ -621,9 +621,9 @@ header nav a {
   text-align: left;
   border-left: 7px solid #eb5525;
   margin: 0 8px;
+ transition: box-shadow 0.24s cubic-bezier(.16,1,.32,1), transform 0.23s cubic-bezier(.16,1,.32,1);
 }
-
-.timeline-dot {
+ .timeline-dot {
   width: 16px;
   height: 16px;
   background: #eb5525;
@@ -631,10 +631,15 @@ header nav a {
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  top: 36px;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
   box-shadow: 0 2px 8px #eb552511;
+}
+.timeline-card:hover {
+  box-shadow: 0 8px 32px #eb552533, 0 2px 18px #eb552515;
+  transform: translateY(-9px) scale(1.028) rotate(-0.7deg);
+  cursor: pointer;
 }
 
 /* Responsive */
