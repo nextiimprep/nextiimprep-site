@@ -1037,6 +1037,115 @@ header nav a {
     flex-direction: column;
   }
 }
+.nextiim-hero {
+  background: linear-gradient(120deg, #fff9f4 60%, #eaf2ff 100%);
+  padding: 44px 0 30px 0;
+  border-radius: 0 0 36px 36px;
+  box-shadow: 0 6px 30px 0 rgba(29, 13, 90, 0.07);
+}
+.nextiim-hero-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 54px;
+  flex-wrap: wrap;
+}
+.nextiim-hero-text {
+  flex: 1 1 430px;
+}
+.hero-badge {
+  display: inline-block;
+  background: #1d0d5a;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 22px;
+  padding: 7px 22px;
+  margin-bottom: 22px;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+.nextiim-hero-text h1 {
+  font-size: 43px;
+  font-weight: 900;
+  color: #22223b;
+  margin-bottom: 16px;
+  line-height: 1.14;
+}
+.hero-highlight {
+  color: #EB5525;
+  letter-spacing: 1.1px;
+  font-weight: 900;
+}
+.hero-lead {
+  color: #263459;
+  font-size: 20px;
+  margin-bottom: 32px;
+  margin-top: 8px;
+  max-width: 500px;
+  line-height: 1.5;
+}
+.hero-btn-row {
+  display: flex;
+  gap: 16px;
+  margin-top: 4px;
+}
+.hero-btn {
+  display: inline-block;
+  font-size: 18px;
+  padding: 12px 28px;
+  border-radius: 9px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 12px rgba(235,85,37,0.07);
+  border: none;
+}
+.hero-btn.primary {
+  background: #EB5525;
+  color: #fff;
+}
+.hero-btn.primary:hover {
+  background: #c9441e;
+}
+.hero-btn.secondary {
+  background: #fff;
+  color: #EB5525;
+  border: 2px solid #EB5525;
+}
+.hero-btn.secondary:hover {
+  background: #fdf2ea;
+}
+.nextiim-hero-image {
+  flex: 1 1 360px;
+  text-align: center;
+}
+.nextiim-hero-image img {
+  width: 340px;
+  max-width: 100%;
+  border-radius: 32px;
+  box-shadow: 0 8px 28px rgba(29,13,90,0.07);
+  object-fit: cover;
+  background: #f5f6fb;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nextiim-hero-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+    width: 97vw;
+    padding: 0 2vw;
+  }
+  .nextiim-hero-text h1 {
+    font-size: 27px;
+  }
+  .nextiim-hero-image img {
+    width: 95vw;
+    border-radius: 18px;
+  }
+}
+
 </style>
 
 </style>
