@@ -1071,15 +1071,20 @@ header nav a {
   object-fit: cover;
 }
 .hero-badge {
-  background: #eb5525;
+  display: inline-block;
+  background: linear-gradient(90deg, #eb5525 80%, #ee9138 100%);
   color: #fff;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  padding: 11px 28px 8px 28px;
-  border-radius: 16px;
-  margin-bottom: 22px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 18px 0 rgba(235, 85, 37, 0.12);
+  font-size: 1.14rem;    /* Chota, but still bold */
+  padding: 7px 30px 6px 30px;  /* Thoda slim */
+  border-radius: 22px;   /* Zyada rounded */
+  margin-bottom: 16px;
+  letter-spacing: 0.7px;
+  box-shadow: 0 2px 14px 0 rgba(235, 85, 37, 0.11);
+  transition: box-shadow 0.18s;
+  border: 2.5px solid #fff4;   /* subtle border for premium feel */
+  text-shadow: 0 1px 6px #cf3b0c2e;
 }
 .nextiim-hero h1 {
   font-size: 3rem;
