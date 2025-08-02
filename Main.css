@@ -1218,6 +1218,124 @@ header nav a {
   .btn-primary, .btn-outline { padding: 9px 16px; font-size: 1rem;}
 }
 
+.lead-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  padding: 30px 0 60px 0;
+  gap: 30px;
+}
+.lead-left {
+  flex: 1;
+  margin-right: 36px;
+  max-width: 420px;
+}
+.lead-left h2 {
+  font-size: 2.5rem;
+  color: #1b1850;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+.lead-left .tagline {
+  font-size: 1.45rem;
+  margin: 12px 0 22px 0;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2442b1 15%, #ec4543 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2px;
+}
+.lead-left .sub {
+  font-size: 1.12rem;
+  color: #373737;
+  margin-bottom: 10px;
+}
+
+.lead-form {
+  background: #fff;
+  padding: 30px 34px;
+  border-radius: 18px;
+  box-shadow: 0 4px 28px #2a1b5022;
+  min-width: 340px;
+  max-width: 350px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lead-form label {
+  font-weight: 600;
+  color: #1b1850;
+  margin-bottom: 2px;
+}
+.lead-form input,
+.lead-form select {
+  padding: 13px;
+  border: 1.2px solid #ececec;
+  border-radius: 7px;
+  font-size: 1.08rem;
+  margin-bottom: 4px;
+  outline: none;
+  background: #fcfcfc;
+  transition: border 0.18s;
+}
+.lead-form input:focus,
+.lead-form select:focus {
+  border-color: #eb5525;
+}
+.lead-form button {
+  background: #eb5525;
+  color: #fff;
+  border: none;
+  padding: 13px;
+  border-radius: 7px;
+  font-size: 1.14rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.16s;
+  margin-top: 10px;
+  box-shadow: 0 2px 16px 0 #eb552525;
+}
+.lead-form button:hover {
+  background: #d44119;
+}
+.success-msg {
+  color: #219838;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 1.04rem;
+}
+.error-msg {
+  color: #ec4543;
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 1.04rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .lead-section {
+    flex-direction: column;
+    gap: 0;
+    padding: 25px 0 40px 0;
+  }
+  .lead-left {
+    margin-right: 0;
+    margin-bottom: 18px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .lead-form {
+    min-width: 210px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 22px 13px;
+  }
+}
 
 </style>
 
