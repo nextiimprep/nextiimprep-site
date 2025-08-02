@@ -203,45 +203,123 @@
     </div>
   </div>
 </section>
-<section class="nextiim-lead-hero">
-  <div class="lead-left">
-    <h1>
-      <span>Next</span> begins here,<br>
-      <span class="lead-gradient">where your IIM dream</span> takes its first step.
-    </h1>
-    <p class="lead-caption">
-      सही गाइडेंस मिले, तो Success खुद बोल उठेगी!
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NextIIM Lead Form</title>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #fff9f5; margin: 0; }
+    .lead-section {
+      display: flex; align-items: center; justify-content: center;
+      min-height: 80vh; padding: 30px 0;
+    }
+    .lead-left { flex: 1; margin-right: 40px; }
+    .lead-left h2 { font-size: 2.4rem; color: #1b1850; font-weight: 800; }
+    .lead-left .tagline {
+      font-size: 1.7rem; margin: 12px 0 22px 0; font-weight: 700;
+      background: linear-gradient(90deg, #2442b1 10%, #ec4543 90%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; color: transparent;
+    }
+    .lead-left .sub { font-size: 1.15rem; color: #373737; }
+    .lead-form {
+      background: #fff; padding: 32px 34px; border-radius: 18px;
+      box-shadow: 0 4px 28px #2a1b5022; min-width: 350px;
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .lead-form input, .lead-form select {
+      padding: 13px; border: 1.2px solid #ececec; border-radius: 7px;
+      font-size: 1.1rem; margin-bottom: 6px; outline: none;
+    }
+    .lead-form label { font-weight: 600; color: #1b1850; margin-bottom: 2px; }
+    .lead-form button {
+      background: #eb5525; color: #fff; border: none;
+      padding: 13px; border-radius: 7px; font-size: 1.17rem;
+      font-weight: 700; cursor: pointer; transition: 0.16s;
+    }
+    .lead-form button:hover { background: #d44119; }
+    .success-msg { color: #219838; font-weight: 600; margin-top: 10px; }
+    .error-msg { color: #ec4543; font-weight: 600; margin-top: 10px; }
+    @media (max-width: 900px) {
+      .lead-section { flex-direction: column; }
+      .lead-left { margin-right: 0; margin-bottom: 24px; }
+      .lead-form { min-width: 260px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="lead-section">
+    <div class="lead-left">
+      <h2>Next Begins Here</h2>
+      <div class="tagline">When Dream Meets Its First Step — IIM</div>
+      <div class="sub">Start your journey to India’s top BBA/IIM campuses.</div>
+    </div>
+    <form class="lead-form" id="leadForm">
+      <label for="name">Name*</label>
+      <input type="text" id="name" name="name" required />
+      <label for="mobile">Mobile No.*</label>
+      <input type="text" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" required />
+      <label for="exam">What are you Preparing for?</label>
+<select id="exam" name="exam" required>
+  <option value="">Select Exam</option>
+  <option value="IPMAT Indore">IPMAT Indore</option>
+  <option value="IPMAT Rohtak">IPMAT Rohtak</option>
+  <option value="JIPMAT">JIPMAT</option>
+  <option value="DU BMS/BBA (CUET)">DU BMS/BBA (CUET)</option>
+  <option value="Symbiosis SET (BBA)">Symbiosis SET (BBA)</option>
+  <option value="NMIMS NPAT">NMIMS NPAT</option>
+  <option value="Christ BBA">Christ BBA</option>
+  <option value="Xavier’s BMS">Xavier’s BMS</option>
+  <option value="Nirma University IPM">Nirma University IPM</option>
+  <option value="NALSAR IPM">NALSAR IPM</option>
+  <option value="IIFT Kakinada IPM">IIFT Kakinada IPM</option>
+  <option value="TAPMI Manipal IPM">TAPMI Manipal IPM</option>
+  <option value="Other / Not Sure">Other / Not Sure</option>
+</select>
+      <button type="submit">Submit</button>
+      <div class="success-msg" style="display:none;"></div>
+      <div class="error-msg" style="display:none;"></div>
+    </form>
   </div>
-  <form class="lead-form" id="leadForm">
-    <label>Name*</label>
-    <input type="text" name="name" placeholder="Type your name" required />
+  <script>
+    const form = document.getElementById('leadForm');
+    const successMsg = document.querySelector('.success-msg');
+    const errorMsg = document.querySelector('.error-msg');
 
-    <label>Mobile No.*</label>
-    <input type="tel" name="mobile" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile" required />
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      const data = {
+        name: form.name.value.trim(),
+        mobile: form.mobile.value.trim(),
+        exam: form.exam.value
+      };
+      try {
+        const res = await fetch('https://script.google.com/macros/s/AKfycbzmNW0msu6Nl0vHQyP0Bnm8jrzRuEd3RJnMY80WvHLaQA7hBFejAmF670YZHFMH1faE/exec', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        const result = await res.json();
+        if (result.result === 'success') {
+          successMsg.textContent = 'Thank you! Your details have been submitted.';
+          successMsg.style.display = 'block';
+          form.reset();
+        } else {
+          errorMsg.textContent = 'Failed to submit. Please try again!';
+          errorMsg.style.display = 'block';
+        }
+      } catch (err) {
+        errorMsg.textContent = 'Something went wrong. Please try again.';
+        errorMsg.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
 
-    <label>What are you Preparing for?*</label>
-    <select name="exam" required>
-      <option value="">Select exam</option>
-      <option>IPMAT Indore</option>
-      <option>IPMAT Rohtak</option>
-      <option>JIPMAT</option>
-      <option>DU BMS/BBA (CUET)</option>
-      <option>Symbiosis SET (BBA)</option>
-      <option>NMIMS NPAT</option>
-      <option>Christ BBA</option>
-      <option>Xavier’s BMS</option>
-      <option>Nirma University IPM</option>
-      <option>NALSAR IPM</option>
-      <option>IIFT Kakinada IPM</option>
-      <option>TAPMI Manipal IPM</option>
-      <option>Other / Not Sure</option>
-    </select>
-
-    <button type="submit">Submit</button>
-    <p id="leadMsg"></p>
-  </form>
-</section>
 
 <section id="about" style="padding: 60px 20px; background: #f8f9fa; color: #1D0D5A;">
   <div class="container" style="max-width: 1200px; margin: auto;">
