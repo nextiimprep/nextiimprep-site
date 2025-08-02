@@ -294,36 +294,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Attach globally if you use jumpToSlide from inline HTML
   window.jumpToSlide = jumpToSlide;
 });
-<script>
-const leadForm = document.getElementById('leadForm');
-const leadMsg = document.getElementById('leadMsg');
-leadForm.addEventListener('submit', async function(e) {
-  e.preventDefault();
-  leadMsg.textContent = "Submitting...";
-  leadMsg.style.color = "#a0802e";
-  const data = {
-    name: this.name.value.trim(),
-    mobile: this.mobile.value.trim(),
-    exam: this.exam.value
-  };
-  try {
-    const res = await fetch('https://script.google.com/macros/s/AKfycbzmNW0msu6Nl0vHQyP0Bnm8jrzRuEd3RJnMY80WvHLaQA7hBFejAmF670YZHFMH1faE/exec', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    });
-    const out = await res.json();
-    if (out.result === "success") {
-      leadMsg.textContent = "Thank you! We’ll connect soon.";
-      leadMsg.style.color = "#22aa4f";
-      leadForm.reset();
-    } else {
-      leadMsg.textContent = "Error. Please try again.";
-      leadMsg.style.color = "#eb5525";
-    }
-  } catch (err) {
-    leadMsg.textContent = "Network error. Try again.";
-    leadMsg.style.color = "#eb5525";
-  }
-});
-</script>
+
