@@ -204,41 +204,48 @@
   </div>
 </section>
 
-    <section class="lead-section">
-  <div class="lead-left">
-    <h2>Next Begins Here</h2>
-    <div class="tagline">When Dream Meets Its First Step — IIM</div>
-    <div class="sub">Start your journey to India’s top BBA/IIM campuses.</div>
+  <section class="lead-section hero-bg-shape">
+  <div class="lead-inner">
+    <div class="lead-left">
+      <h2 class="lead-title">
+        <span class="big-headline">Next begins here,</span><br>
+        <span class="big-gradient">where your IIM dream takes its first step</span>
+      </h2>
+      <div class="tagline">सही Guidance लोगे, तो Success खुद बोल उठेगी!</div>
+    </div>
+    <div class="leadform-section">
+      <form class="lead-form" id="leadForm">
+        <label for="name">Name*</label>
+        <input type="text" id="name" name="Name" placeholder="Type here" required />
+
+        <label for="mobile">Mobile No.*</label>
+        <input type="text" id="mobile" name="Mobile No." maxlength="10" pattern="\d{10}" placeholder="Type here" required />
+
+        <label for="exam">What are you Preparing for?*</label>
+        <select id="exam" name="Exam" required>
+          <option value="">Select Exam</option>
+          <option value="IPMAT Indore">IPMAT Indore</option>
+          <option value="IPMAT Rohtak">IPMAT Rohtak</option>
+          <option value="JIPMAT">JIPMAT</option>
+          <option value="DU BMS/BBA (CUET)">DU BMS/BBA (CUET)</option>
+          <option value="Symbiosis SET (BBA)">Symbiosis SET (BBA)</option>
+          <option value="NMIMS NPAT">NMIMS NPAT</option>
+          <option value="Christ BBA">Christ BBA</option>
+          <option value="Xavier’s BMS">Xavier’s BMS</option>
+          <option value="Nirma University IPM">Nirma University IPM</option>
+          <option value="NALSAR IPM">NALSAR IPM</option>
+          <option value="IIFT Kakinada IPM">IIFT Kakinada IPM</option>
+          <option value="TAPMI Manipal IPM">TAPMI Manipal IPM</option>
+          <option value="Other / Not Sure">Other / Not Sure</option>
+        </select>
+        <button type="submit" class="btn-primary">Submit</button>
+        <div class="success-msg" style="display:none;"></div>
+        <div class="error-msg" style="display:none;"></div>
+      </form>
+    </div>
   </div>
-  <form class="lead-form" id="leadForm">
-    <label for="name">Name*</label>
-    <input type="text" id="name" name="name" required />
-
-    <label for="mobile">Mobile No.*</label>
-    <input type="text" id="mobile" name="mobile" maxlength="10" pattern="\d{10}" required />
-
-    <label for="exam">What are you Preparing for?</label>
-    <select id="exam" name="exam" required>
-      <option value="">Select Exam</option>
-      <option value="IPMAT Indore">IPMAT Indore</option>
-      <option value="IPMAT Rohtak">IPMAT Rohtak</option>
-      <option value="JIPMAT">JIPMAT</option>
-      <option value="DU BMS/BBA (CUET)">DU BMS/BBA (CUET)</option>
-      <option value="Symbiosis SET (BBA)">Symbiosis SET (BBA)</option>
-      <option value="NMIMS NPAT">NMIMS NPAT</option>
-      <option value="Christ BBA">Christ BBA</option>
-      <option value="Xavier’s BMS">Xavier’s BMS</option>
-      <option value="Nirma University IPM">Nirma University IPM</option>
-      <option value="NALSAR IPM">NALSAR IPM</option>
-      <option value="IIFT Kakinada IPM">IIFT Kakinada IPM</option>
-      <option value="TAPMI Manipal IPM">TAPMI Manipal IPM</option>
-      <option value="Other / Not Sure">Other / Not Sure</option>
-    </select>
-    <button type="submit">Submit</button>
-    <div class="success-msg" style="display:none;"></div>
-    <div class="error-msg" style="display:none;"></div>
-  </form>
 </section>
+
 
     
 <section id="about" style="padding: 60px 20px; background: #f8f9fa; color: #1D0D5A;">
