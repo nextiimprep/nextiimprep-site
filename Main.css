@@ -1218,130 +1218,74 @@ header nav a {
   .btn-primary, .btn-outline { padding: 9px 16px; font-size: 1rem;}
 }
 .lead-section {
-  padding: 54px 0 50px 0;
-  background: #f8f8ff;
-  position: relative;
-  overflow: hidden;
-}
-.hero-bg-shape:before {
-  content: '';
-  position: absolute;
-  right: -120px;
-  top: -90px;
-  width: 520px;
-  height: 350px;
-  background: radial-gradient(ellipse at 60% 40%, #7c83fd22 60%, #eae8fc 100%);
-  z-index: 1;
-  filter: blur(1.5px);
-}
-.lead-inner {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  max-width: 1200px;
-  margin: auto;
-  position: relative;
-  z-index: 2;
-  gap: 36px;
+  min-height: 75vh;
+  background: #fff9f5;
+  border-radius: 24px;
+  margin: 40px auto;
+  padding: 32px 0;
+  max-width: 1000px;
+  box-shadow: 0 6px 32px #2a1b501a;
+  gap: 40px;
 }
-.lead-left {
-  flex: 1;
-  margin-top: 8px;
-}
-.lead-title .big-headline {
-  font-size: 2.6rem;
+.lead-left { flex: 1; margin-right: 40px; }
+.lead-left h2 {
+  font-size: 2.4rem;
+  color: #1b1850;
   font-weight: 800;
-  color: #24295b;
-  line-height: 1.13;
-  letter-spacing: -1px;
+  margin-bottom: 3px;
 }
-.lead-title .big-gradient {
-  font-size: 2.1rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #6f6cf7 22%, #62aad2 90%);
-  color: transparent;
-  background-clip: text;
+.lead-left .tagline {
+  font-size: 1.38rem;
+  margin: 12px 0 18px 0;
+  font-weight: 700;
+  background: linear-gradient(90deg, #2442b1 10%, #ec4543 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
-.tagline {
-  font-size: 1.14rem;
-  color: #353769;
-  font-weight: 500;
-  margin-top: 21px;
-  margin-bottom: 9px;
-  letter-spacing: .03em;
-}
-.leadform-section {
+.lead-left .sub { font-size: 1.08rem; color: #373737; }
+.lead-form {
   background: #fff;
+  padding: 30px 30px;
   border-radius: 18px;
-  box-shadow: 0 6px 36px 0 rgba(59,39,120,0.10);
-  min-width: 360px;
-  max-width: 370px;
-  padding: 38px 28px 28px 28px;
-  z-index: 2;
+  box-shadow: 0 4px 18px #2a1b5022;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
-.lead-form label {
-  color: #1c2251;
-  font-weight: 600;
-  font-size: 1rem;
-  display: block;
-  margin-bottom: 7px;
-  margin-top: 13px;
-  letter-spacing: .03em;
-}
-.lead-form input,
-.lead-form select {
-  width: 100%;
-  padding: 14px 13px;
+.lead-form input, .lead-form select {
+  padding: 12px;
+  border: 1.2px solid #ececec;
+  border-radius: 7px;
   font-size: 1.06rem;
-  border-radius: 8px;
-  border: 1.3px solid #dde3f5;
-  background: #f8f8ff;
-  margin-bottom: 3px;
+  margin-bottom: 6px;
   outline: none;
-  transition: border 0.2s;
 }
-.lead-form input:focus,
-.lead-form select:focus {
-  border-color: #746cf7;
-  box-shadow: 0 2px 12px #6f6cf722;
-}
-.btn-primary {
-  background: linear-gradient(90deg, #6f6cf7 18%, #62aad2 90%);
+.lead-form label { font-weight: 600; color: #1b1850; margin-bottom: 2px; }
+.lead-form button {
+  background: #eb5525;
   color: #fff;
-  font-weight: 700;
-  padding: 13px 0;
-  width: 100%;
-  font-size: 1.09rem;
-  border-radius: 9px;
   border: none;
-  margin-top: 19px;
-  box-shadow: 0 2px 12px #6f6cf72c;
+  padding: 12px;
+  border-radius: 7px;
+  font-size: 1.13rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.18s;
+  transition: 0.18s;
 }
-.btn-primary:hover {
-  background: #1d206c;
-}
-.success-msg {
-  color: #32a851;
-  font-size: 1.04rem;
-  margin-top: 12px;
-  display: block;
-  text-align: center;
-}
-.error-msg {
-  color: #e6454c;
-  font-size: 1.04rem;
-  margin-top: 12px;
-  display: block;
-  text-align: center;
-}
-@media (max-width: 820px) {
-  .lead-inner { flex-direction: column; gap: 20px; }
-  .leadform-section { margin: 0 auto; }
-  .lead-left { text-align: center; }
+.lead-form button:hover { background: #d44119; }
+.success-msg { color: #219838; font-weight: 600; margin-top: 10px; }
+.error-msg { color: #ec4543; font-weight: 600; margin-top: 10px; }
+
+@media (max-width: 900px) {
+  .lead-section { flex-direction: column; gap: 24px; padding: 22px 0;}
+  .lead-left { margin-right: 0; margin-bottom: 18px; }
+  .lead-form { min-width: 220px; }
 }
 
 
