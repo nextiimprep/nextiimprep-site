@@ -1204,6 +1204,11 @@ header nav a {
   display: flex;
   justify-content: flex-end;
 }
+.btn-primary,
+.btn-outline {
+  text-decoration: none !important;
+}
+
 @media (max-width: 1100px) {
   .nextiim-hero { flex-direction: column-reverse; text-align: center; gap: 16px; padding: 22px 2vw;}
   .hero-left { align-items: center;}
@@ -1217,6 +1222,10 @@ header nav a {
   .hero-right img { max-width: 160px;}
   .btn-primary, .btn-outline { padding: 9px 16px; font-size: 1rem;}
 }
+html {
+  scroll-behavior: smooth;
+}
+
 .lead-section {
   display: flex;
   align-items: center;
