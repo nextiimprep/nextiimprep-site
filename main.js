@@ -295,3 +295,36 @@ document.addEventListener("DOMContentLoaded", function () {
   window.jumpToSlide = jumpToSlide;
 });
 
+const form = document.getElementById('leadForm');
+const successMsg = document.querySelector('.success-msg');
+const errorMsg = document.querySelector('.error-msg');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  successMsg.style.display = 'none';
+  errorMsg.style.display = 'none';
+  const data = {
+    name: form.name.value.trim(),
+    mobile: form.mobile.value.trim(),
+    exam: form.exam.value
+  };
+  try {
+    const res = await fetch('/.netlify/functions/submit-lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    if (result.result === 'success') {
+      successMsg.textContent = 'Thank you! Your details have been submitted.';
+      successMsg.style.display = 'block';
+      form.reset();
+    } else {
+      errorMsg.textContent = 'Failed to submit. Please try again!';
+      errorMsg.style.display = 'block';
+    }
+  } catch (err) {
+    errorMsg.textContent = 'Something went wrong. Please try again.';
+    errorMsg.style.display = 'block';
+  }
+});
