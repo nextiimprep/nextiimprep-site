@@ -295,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.jumpToSlide = jumpToSlide;
 });
 
+
 const form = document.getElementById('leadForm');
 const successMsg = document.querySelector('.success-msg');
 const errorMsg = document.querySelector('.error-msg');
@@ -303,14 +304,11 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   successMsg.style.display = 'none';
   errorMsg.style.display = 'none';
-
-  // Make object keys match the input name attributes
   const data = {
-    "Name": form["Name"].value.trim(),
-    "Mobile No.": form["Mobile No."].value.trim(),
-    "Exam": form["Exam"].value
+    name: form.name.value.trim(),
+    mobile: form.mobile.value.trim(),
+    exam: form.exam.value
   };
-
   try {
     const res = await fetch('/.netlify/functions/submit-lead', {
       method: 'POST',
