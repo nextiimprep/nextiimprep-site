@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/nextiimprep/nextiimprep-site#readme",
   "dependencies": {
-    "google-spreadsheet": "^4.1.5"
+    "google-spreadsheet": "^3.3.0"
   }
 }
