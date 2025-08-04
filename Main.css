@@ -1222,70 +1222,154 @@ header nav a {
   align-items: center;
   justify-content: center;
   min-height: 75vh;
-  background: #fff9f5;
-  border-radius: 24px;
-  margin: 40px auto;
-  padding: 32px 0;
-  max-width: 1000px;
-  box-shadow: 0 6px 32px #2a1b501a;
-  gap: 40px;
+  background: linear-gradient(110deg, #f6f9ff 60%, #f5f0fc 100%);
+  border-radius: 30px;
+  margin: 48px auto 60px auto;
+  padding: 48px 0;
+  max-width: 1120px;
+  box-shadow: 0 10px 36px #2a1b5020;
+  gap: 56px;
+  position: relative;
+  overflow: hidden;
 }
-.lead-left { flex: 1; margin-right: 40px; }
+
+.lead-section::before {
+  content: "";
+  position: absolute;
+  right: -80px;
+  top: -90px;
+  width: 400px;
+  height: 380px;
+  background: radial-gradient(ellipse at 60% 50%, #e8ebff 80%, transparent 100%);
+  z-index: 0;
+  opacity: 0.65;
+  pointer-events: none;
+}
+
+.lead-left {
+  flex: 1;
+  margin-right: 48px;
+  z-index: 1;
+  padding-left: 32px;
+}
+
 .lead-left h2 {
-  font-size: 2.4rem;
-  color: #1b1850;
+  font-size: 2.7rem;
+  color: #211e5a;
   font-weight: 800;
-  margin-bottom: 3px;
+  margin-bottom: 8px;
+  line-height: 1.2;
 }
-.lead-left .tagline {
-  font-size: 1.38rem;
-  margin: 12px 0 18px 0;
-  font-weight: 700;
-  background: linear-gradient(90deg, #2442b1 10%, #ec4543 90%);
+
+.lead-gradient {
+  display: inline-block;
+  background: linear-gradient(90deg, #284be8 0%, #49b9e6 60%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
-.lead-left .sub { font-size: 1.08rem; color: #373737; }
+
+.lead-left .tagline {
+  font-size: 1.18rem;
+  margin: 16px 0 16px 0;
+  font-weight: 700;
+  color: #25316d;
+}
+
+.lead-left .sub {
+  font-size: 1.12rem;
+  color: #48465e;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}
+
 .lead-form {
   background: #fff;
-  padding: 30px 30px;
-  border-radius: 18px;
-  box-shadow: 0 4px 18px #2a1b5022;
-  min-width: 320px;
+  padding: 38px 32px 32px 32px;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px #2a1b5035;
+  min-width: 340px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
+  z-index: 1;
 }
-.lead-form input, .lead-form select {
-  padding: 12px;
-  border: 1.2px solid #ececec;
-  border-radius: 7px;
+
+.lead-form label {
+  font-weight: 600;
+  color: #263375;
+  margin-bottom: 2px;
   font-size: 1.06rem;
-  margin-bottom: 6px;
-  outline: none;
 }
-.lead-form label { font-weight: 600; color: #1b1850; margin-bottom: 2px; }
+
+.lead-form input,
+.lead-form select {
+  padding: 14px 13px;
+  border: 1.4px solid #d2dbf2;
+  border-radius: 9px;
+  font-size: 1.08rem;
+  margin-bottom: 7px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+  background: #f8f9ff;
+}
+
+.lead-form input:focus,
+.lead-form select:focus {
+  border-color: #284be8;
+  box-shadow: 0 2px 12px #284be820;
+}
+
 .lead-form button {
-  background: #eb5525;
+  background: linear-gradient(90deg, #284be8 0%, #49b9e6 90%);
   color: #fff;
   border: none;
-  padding: 12px;
-  border-radius: 7px;
-  font-size: 1.13rem;
+  padding: 14px 0;
+  border-radius: 9px;
+  font-size: 1.15rem;
   font-weight: 700;
   cursor: pointer;
-  transition: 0.18s;
+  transition: background 0.18s, box-shadow 0.18s;
+  box-shadow: 0 4px 20px #49b9e62d;
 }
-.lead-form button:hover { background: #d44119; }
-.success-msg { color: #219838; font-weight: 600; margin-top: 10px; }
-.error-msg { color: #ec4543; font-weight: 600; margin-top: 10px; }
+
+.lead-form button:hover {
+  background: #1b1850;
+  box-shadow: 0 4px 24px #284be840;
+}
+
+.success-msg {
+  color: #219838;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.error-msg {
+  color: #ec4543;
+  font-weight: 600;
+  margin-top: 12px;
+}
 
 @media (max-width: 900px) {
-  .lead-section { flex-direction: column; gap: 24px; padding: 22px 0;}
-  .lead-left { margin-right: 0; margin-bottom: 18px; }
-  .lead-form { min-width: 220px; }
+  .lead-section {
+    flex-direction: column;
+    gap: 32px;
+    padding: 22px 0;
+    max-width: 98vw;
+  }
+  .lead-left {
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    text-align: center;
+  }
+  .lead-form {
+    min-width: 220px;
+    margin: 0 auto;
+  }
 }
 
 
