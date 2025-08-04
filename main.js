@@ -303,11 +303,14 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
   successMsg.style.display = 'none';
   errorMsg.style.display = 'none';
+
+  // Make object keys match the input name attributes
   const data = {
-    name: form.name.value.trim(),
-    mobile: form.mobile.value.trim(),
-    exam: form.exam.value
+    "Name": form["Name"].value.trim(),
+    "Mobile No.": form["Mobile No."].value.trim(),
+    "Exam": form["Exam"].value
   };
+
   try {
     const res = await fetch('/.netlify/functions/submit-lead', {
       method: 'POST',
@@ -328,3 +331,4 @@ form.addEventListener('submit', async (e) => {
     errorMsg.style.display = 'block';
   }
 });
+
