@@ -34,10 +34,7 @@ exports.handler = async (event, context) => {
   const doc = new GoogleSpreadsheet('1lx3kccrHN9FhEKtitd68vBl89GExheFVDteuE9OV2lg');
   try {
     // Change here for v4+
-    await doc.useServiceAccountAuth({
-      client_email: creds.client_email,
-      private_key: creds.private_key,
-    });
+    await doc.useServiceAccountAuth(creds);
     console.log("Authenticated to Google Sheets!");
     await doc.loadInfo();
     console.log("Sheet loaded:", doc.title);
