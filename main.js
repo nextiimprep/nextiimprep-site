@@ -252,50 +252,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Carousel code
-  let currentSlide = 0;
-  let slideTimer;
-  const images = document.querySelector('.carousel-images');
-  const dots = document.querySelectorAll('.dot');
-  const totalSlides = images.children.length;
-
-  function showSlide(index) {
-    images.style.transition = 'transform 0.6s cubic-bezier(.75,0,.25,1)';
-    images.style.transform = `translateX(-${index * 100}vw)`;
-    dots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === index);
-    });
-    currentSlide = index;
-  }
-
-  function jumpToSlide(index) {
-    showSlide(index);
-    resetAutoSlide();
-  }
-
-  function autoSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-    slideTimer = setTimeout(autoSlide, 4000);
-  }
-
-  function resetAutoSlide() {
-    clearTimeout(slideTimer);
-    slideTimer = setTimeout(autoSlide, 4000);
-  }
-
-  dots.forEach((dot, i) => {
-    dot.onclick = function() { jumpToSlide(i); };
-  });
-
-  showSlide(currentSlide);
-  slideTimer = setTimeout(autoSlide, 4000);
-
-  // Attach globally if you use jumpToSlide from inline HTML
-  window.jumpToSlide = jumpToSlide;
-});
-
-
 const form = document.getElementById('leadForm');
 const successMsg = document.querySelector('.success-msg');
 const errorMsg = document.querySelector('.error-msg');
