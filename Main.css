@@ -1093,11 +1093,16 @@ header nav a {
 }
 .hero-left {
   flex: 1;
+  min-width: 0;  /* ✅ This will allow shrinking on mobile */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   z-index: 2;
-  min-width: 0;
+}
+@media (min-width: 700px) {
+  .hero-left {
+    min-width: 390px;
+  }
 }
 .hero-right {
   flex: 1.25;
