@@ -285,4 +285,4 @@ form.addEventListener('submit', async (e) => {
     errorMsg.style.display = 'block';
   }
 });
-
+});
