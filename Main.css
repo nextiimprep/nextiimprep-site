@@ -124,11 +124,11 @@ header nav a {
       border-radius: 24px;
     }
     @keyframes slide {
-      0%, 30% { transform: translateX(0); }
-      33%, 63% { transform: translateX(-100vw); }
-      66%, 96% { transform: translateX(-200vw); }
-      100% { transform: translateX(0); }
-    }
+  0%, 30% { transform: translateX(0); }
+  33%, 63% { transform: translateX(-100%); }
+  66%, 96% { transform: translateX(-200%); }
+  100% { transform: translateX(0); }
+}
     .dots {
       text-align: center;
       margin-top: -20px;
