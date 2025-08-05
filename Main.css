@@ -225,7 +225,7 @@ header nav a {
   position: fixed;
   left: 0;
   top: 90px; /* or whatever your header height is */
-  width: 100vw;
+  width: 100%;
   background: #fff;
   box-shadow: 0 8px 32px rgba(0,0,0,0.09);
   padding: 48px 0 40px 0;
@@ -315,7 +315,7 @@ header nav a {
     }
     @media (max-width: 768px) {
       .info-panel {
-        width: 100vw;
+        width: 100%;
       } 
     }
 .logo-scroll-section {
@@ -1128,7 +1128,7 @@ header nav a {
     text-align: center;
     gap: 16px;
     padding: 22px 2vw;
-    max-width: 100vw;
+    max-width: 100%;
     border-radius: 20px;
   }
   .hero-left {
@@ -1150,7 +1150,7 @@ header nav a {
     flex-direction: column-reverse;
     padding: 0 !important;
     gap: 12px;
-    max-width: 100vw !important;
+    max-width: 100% !important;
     border-radius: 0 !important;
     overflow: hidden !important;
   }
@@ -1162,7 +1162,7 @@ header nav a {
     box-sizing: border-box;
   }
   .hero-right {
-    width: 100vw !important;
+    width: 100% !important;
     min-width: 0 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -1170,8 +1170,8 @@ header nav a {
     align-items: center;
   }
   .hero-right img {
-    width: 100vw !important;
-    max-width: 100vw !important;
+    width: 100% !important;
+    max-width: 100% !important;
     min-width: 0 !important;
     height: auto !important;
     display: block;
