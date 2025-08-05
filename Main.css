@@ -1019,27 +1019,28 @@ header nav a {
     flex-direction: row;
     justify-content: flex-end;
   }
-  .navbar-links {
-    position: fixed;
-    top: 80px; /* below header */
-    right: -110vw; /* hide out of view */
-    width: 80vw;
-    max-width: 340px;
-    height: 100vh;
-    background: #fff;
-    box-shadow: -4px 0 22px rgba(0,0,0,0.08);
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    z-index: 2002;
-    padding: 30px 24px;
-    transition: right 0.3s;
-    border-radius: 12px 0 0 12px;
-    border-left: 2px solid #EB5525;
-  }
-  .navbar-links.open {
-    right: 0;
-  }
+.navbar-links {
+  position: fixed;
+  top: 80px; /* below header */
+  right: -100%;   /* <-- yahi major fix hai */
+  width: 90%;     /* ya 80vw bhi rakh sakte, but 90% jyada safe hai */
+  max-width: 340px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -4px 0 22px rgba(0,0,0,0.08);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+  z-index: 2002;
+  padding: 30px 24px;
+  transition: right 0.3s;
+  border-radius: 12px 0 0 12px;
+  border-left: 2px solid #EB5525;
+}
+.navbar-links.open {
+  right: 0;
+}
+
   .navbar-links li {
     margin: 0 0 18px 0;
     width: 100%;
